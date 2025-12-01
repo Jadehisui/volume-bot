@@ -1,0 +1,797 @@
+2025-12-01 08:15:26,598 - database - INFO - ✅ Database initialized successfully
+2025-12-01 08:15:27,227 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 08:15:27,232 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:15:27,232 - __main__ - ERROR - ❌ Failed to start bot: SUB_WALLET_1_ADDRESS is required
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 1051, in <module>
+    bot = MonadVolumeBot()
+  File "/home/carnage/volume bot /bot.py", line 48, in __init__
+    self.wallet_manager = WalletManager()
+                          ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /wallet_manager.py", line 35, in __init__
+    self.sub_wallets = self._load_sub_wallets_with_addresses()
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /wallet_manager.py", line 109, in _load_sub_wallets_with_addresses
+    raise ValueError(f"{address_env} is required")
+ValueError: SUB_WALLET_1_ADDRESS is required
+2025-12-01 08:17:16,497 - database - INFO - ✅ Database initialized successfully
+2025-12-01 08:17:21,065 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 08:17:21,069 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:17:21,071 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 08:17:21,074 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 08:17:21,077 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 08:17:21,079 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 08:17:21,081 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 08:17:21,082 - wallet_manager - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:17:21,082 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 08:17:21,082 - wallet_manager - INFO - 📱 5 sub-wallets loaded with specific addresses
+2025-12-01 08:17:21,082 - wallet_manager - INFO -   • Wallet 1: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 08:17:21,082 - wallet_manager - INFO -   • Wallet 2: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 08:17:21,082 - wallet_manager - INFO -   • Wallet 3: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 08:17:21,082 - wallet_manager - INFO -   • Wallet 4: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 08:17:21,082 - wallet_manager - INFO -   • Wallet 5: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 08:17:21,082 - zero_x_service - WARNING - ⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)
+2025-12-01 08:17:21,082 - zero_x_service - INFO - ✅ 0x Service initialized for Monad (chain 143)
+2025-12-01 08:17:21,082 - zero_x_service - INFO - 🔑 API Key: ❌ Not provided (using public)
+2025-12-01 08:17:21,082 - zero_x_service - INFO - 📊 Slippage: 1.0%
+2025-12-01 08:17:21,082 - zero_x_service - INFO - ⏰ Deadline: 30 minutes
+2025-12-01 08:17:21,082 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2025-12-01 08:17:21,082 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2025-12-01 08:17:21,083 - __main__ - INFO - ✅ Monad Volume Bot initialized
+2025-12-01 08:17:21,083 - __main__ - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:17:21,083 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 08:17:21,083 - __main__ - ERROR - ❌ Setup validation failed: 'WalletManager' object has no attribute 'validate_wallet_setup'
+2025-12-01 08:17:21,083 - __main__ - ERROR - ❌ Failed to start bot: 'WalletManager' object has no attribute 'validate_wallet_setup'
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 1051, in <module>
+    bot = MonadVolumeBot()
+  File "/home/carnage/volume bot /bot.py", line 63, in __init__
+    self._validate_setup()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 69, in _validate_setup
+    is_valid, issues = self.wallet_manager.validate_wallet_setup()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WalletManager' object has no attribute 'validate_wallet_setup'
+2025-12-01 08:28:57,523 - database - INFO - ✅ Database initialized successfully
+2025-12-01 08:28:58,136 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 08:28:58,139 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:28:58,142 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 08:28:58,145 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 08:28:58,150 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 08:28:58,152 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 08:28:58,154 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 08:28:58,154 - wallet_manager - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:28:58,154 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 08:28:58,155 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2025-12-01 08:28:58,155 - zero_x_service - WARNING - ⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)
+2025-12-01 08:28:58,155 - zero_x_service - INFO - ✅ 0x Service initialized for Monad (chain 143)
+2025-12-01 08:28:58,155 - zero_x_service - INFO - 🔑 API Key: ❌ Not provided (using public)
+2025-12-01 08:28:58,155 - zero_x_service - INFO - 📊 Slippage: 1.0%
+2025-12-01 08:28:58,155 - zero_x_service - INFO - ⏰ Deadline: 30 minutes
+2025-12-01 08:28:58,155 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2025-12-01 08:28:58,155 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2025-12-01 08:28:58,155 - __main__ - INFO - ✅ Monad Volume Bot initialized
+2025-12-01 08:28:58,155 - __main__ - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 08:28:58,155 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 08:28:58,155 - wallet_manager - INFO - 🔍 Validating wallet setup...
+2025-12-01 08:28:58,283 - wallet_manager - INFO - 💰 Main wallet: 0.000000 MONAD
+2025-12-01 08:28:58,417 - wallet_manager - INFO - 💸 Fee wallet: 0.000000 MONAD
+2025-12-01 08:28:58,544 - wallet_manager - INFO - 📱 Wallet 1: 0.000000 MONAD
+2025-12-01 08:28:58,722 - wallet_manager - INFO - 📱 Wallet 2: 0.000000 MONAD
+2025-12-01 08:28:58,851 - wallet_manager - INFO - 📱 Wallet 3: 0.000000 MONAD
+2025-12-01 08:28:58,981 - wallet_manager - INFO - 📱 Wallet 4: 0.000000 MONAD
+2025-12-01 08:28:59,109 - wallet_manager - INFO - 📱 Wallet 5: 0.000000 MONAD
+2025-12-01 08:28:59,341 - wallet_manager - INFO - 📦 Current block: 39196929
+2025-12-01 08:28:59,341 - wallet_manager - INFO - ✅ Wallet setup validated
+2025-12-01 08:28:59,341 - database - INFO - ✅ Database initialized successfully
+2025-12-01 08:28:59,341 - __main__ - INFO - ✅ Database validated
+2025-12-01 08:28:59,342 - __main__ - INFO - ✅ All systems ready!
+2025-12-01 08:28:59,416 - __main__ - INFO - 🚀 Monad Volume Bot starting...
+2025-12-01 08:28:59,417 - __main__ - ERROR - ❌ Bot crashed: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 1035, in run
+    logger.info(f"🤖 Bot username: @{application.bot.username}")
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 574, in username
+    return self.bot.username  # type: ignore
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-12-01 08:28:59,419 - __main__ - ERROR - ❌ Failed to start bot: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 1052, in <module>
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 1035, in run
+    logger.info(f"🤖 Bot username: @{application.bot.username}")
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 574, in username
+    return self.bot.username  # type: ignore
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-12-01 09:19:44,245 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:19:44,829 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 09:19:44,834 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:44,838 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 09:19:44,843 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 09:19:44,847 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 09:19:44,851 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 09:19:44,856 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 09:19:44,856 - wallet_manager - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:44,857 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:19:44,857 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2025-12-01 09:19:44,857 - zero_x_service - WARNING - ⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)
+2025-12-01 09:19:44,857 - zero_x_service - INFO - ✅ 0x Service initialized for Monad (chain 143)
+2025-12-01 09:19:44,857 - zero_x_service - INFO - 🔑 API Key: ❌ Not provided (using public)
+2025-12-01 09:19:44,857 - zero_x_service - INFO - 📊 Slippage: 1.0%
+2025-12-01 09:19:44,857 - zero_x_service - INFO - ⏰ Deadline: 30 minutes
+2025-12-01 09:19:44,857 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2025-12-01 09:19:44,857 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2025-12-01 09:19:44,857 - __main__ - INFO - ✅ Monad Volume Bot initialized
+2025-12-01 09:19:44,857 - __main__ - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:44,857 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:19:44,858 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:19:44,858 - __main__ - INFO - ✅ Database initialized
+2025-12-01 09:19:45,107 - __main__ - INFO - 📦 RPC connected - Latest block: 39204523
+2025-12-01 09:19:45,170 - __main__ - INFO - 🚀 Monad Volume Bot starting...
+2025-12-01 09:19:45,170 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2025-12-01 09:19:45,170 - __main__ - INFO - 💰 Minimum deposit: 2,000 MONAD
+2025-12-01 09:19:45,170 - __main__ - INFO - 💸 Fixed fee: 500 MONAD
+2025-12-01 09:19:49,349 - telegram.ext - ERROR - Network Retry Loop (Bootstrap Initialize Application): Failed run number 0 of 0. Aborting.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 109, in do_action
+    await action_cb()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 318, in initialize
+    await super().initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 854, in initialize
+    await self.get_me()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 1999, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 985, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: 
+2025-12-01 09:19:49,362 - __main__ - ERROR - ❌ Bot crashed: httpx.ConnectError: 
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 546, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1054, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1014, in _bootstrap_initialize
+    await network_retry_loop(
+    ...<4 lines>...
+    )
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 109, in do_action
+    await action_cb()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 318, in initialize
+    await super().initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 854, in initialize
+    await self.get_me()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 1999, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 985, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: 
+2025-12-01 09:19:49,369 - __main__ - ERROR - ❌ Failed to start bot: httpx.ConnectError: 
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 560, in main
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 546, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1054, in __run
+    loop.run_until_complete(self._bootstrap_initialize(max_retries=bootstrap_retries))
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1014, in _bootstrap_initialize
+    await network_retry_loop(
+    ...<4 lines>...
+    )
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 109, in do_action
+    await action_cb()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 489, in initialize
+    await self.bot.initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 318, in initialize
+    await super().initialize()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 854, in initialize
+    await self.get_me()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 1999, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 985, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: 
+2025-12-01 09:19:58,401 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:19:58,955 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 09:19:58,958 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:58,960 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 09:19:58,963 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 09:19:58,966 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 09:19:58,970 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 09:19:58,973 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 09:19:58,973 - wallet_manager - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:58,973 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:19:58,973 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2025-12-01 09:19:58,974 - zero_x_service - WARNING - ⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)
+2025-12-01 09:19:58,974 - zero_x_service - INFO - ✅ 0x Service initialized for Monad (chain 143)
+2025-12-01 09:19:58,974 - zero_x_service - INFO - 🔑 API Key: ❌ Not provided (using public)
+2025-12-01 09:19:58,974 - zero_x_service - INFO - 📊 Slippage: 1.0%
+2025-12-01 09:19:58,974 - zero_x_service - INFO - ⏰ Deadline: 30 minutes
+2025-12-01 09:19:58,974 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2025-12-01 09:19:58,974 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2025-12-01 09:19:58,974 - __main__ - INFO - ✅ Monad Volume Bot initialized
+2025-12-01 09:19:58,974 - __main__ - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:19:58,974 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:19:58,975 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:19:58,975 - __main__ - INFO - ✅ Database initialized
+2025-12-01 09:19:59,107 - __main__ - INFO - 📦 RPC connected - Latest block: 39204558
+2025-12-01 09:19:59,174 - __main__ - INFO - 🚀 Monad Volume Bot starting...
+2025-12-01 09:19:59,174 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2025-12-01 09:19:59,175 - __main__ - INFO - 💰 Minimum deposit: 2,000 MONAD
+2025-12-01 09:19:59,175 - __main__ - INFO - 💸 Fixed fee: 500 MONAD
+2025-12-01 09:20:12,988 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/deleteWebhook "HTTP/1.1 200 OK"
+2025-12-01 09:20:15,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:20:15,559 - __main__ - ERROR - ❌ Bot crashed: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 546, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-12-01 09:20:15,562 - __main__ - ERROR - ❌ Failed to start bot: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 560, in main
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 546, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2025-12-01 09:46:27,111 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:46:27,756 - wallet_manager - INFO - ✅ Connected to https://rpc.monad.xyz, chain ID: 143
+2025-12-01 09:46:27,759 - wallet_manager - INFO - ✅ Main wallet loaded: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:46:27,761 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xa260E76023755E3976Ed7A7f834210576e0BBc95
+2025-12-01 09:46:27,764 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x52B2E61B2B23B36aaa16a9ED2638b9C330C54ff5
+2025-12-01 09:46:27,768 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x2a4C2731447E4940477aF7048B0866e764598791
+2025-12-01 09:46:27,770 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0xAFD0E65782B63e668a9283c03D2eD0c8CC5d8714
+2025-12-01 09:46:27,775 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x01239b5B4C5155947580690845B97BAEdBba578f
+2025-12-01 09:46:27,775 - wallet_manager - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:46:27,776 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:46:27,776 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2025-12-01 09:46:27,776 - zero_x_service - WARNING - ⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)
+2025-12-01 09:46:27,776 - zero_x_service - INFO - ✅ 0x Service initialized for Monad (chain 143)
+2025-12-01 09:46:27,776 - zero_x_service - INFO - 🔑 API Key: ❌ Not provided (using public)
+2025-12-01 09:46:27,776 - zero_x_service - INFO - 📊 Slippage: 1.0%
+2025-12-01 09:46:27,776 - zero_x_service - INFO - ⏰ Deadline: 30 minutes
+2025-12-01 09:46:27,776 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2025-12-01 09:46:27,776 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2025-12-01 09:46:27,776 - __main__ - INFO - ✅ Monad Volume Bot initialized
+2025-12-01 09:46:27,776 - __main__ - INFO - 💰 Main wallet: 0xA958dE04a909C59FB240f2C51A6ADC5608131Ec3
+2025-12-01 09:46:27,777 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2025-12-01 09:46:27,777 - database - INFO - ✅ Database initialized successfully
+2025-12-01 09:46:27,779 - __main__ - INFO - ✅ Database initialized
+2025-12-01 09:46:27,961 - __main__ - INFO - 📦 RPC connected - Latest block: 39208525
+2025-12-01 09:46:28,027 - __main__ - INFO - 🚀 Monad Volume Bot starting...
+2025-12-01 09:46:28,028 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2025-12-01 09:46:28,028 - __main__ - INFO - 💰 Minimum deposit: 2,000 MONAD
+2025-12-01 09:46:28,028 - __main__ - INFO - 💸 Fixed fee: 500 MONAD
+2025-12-01 09:46:32,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getMe "HTTP/1.1 200 OK"
+2025-12-01 09:46:32,227 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/deleteWebhook "HTTP/1.1 200 OK"
+2025-12-01 09:46:32,229 - telegram.ext.Application - INFO - Application started
+2025-12-01 09:46:44,990 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:46:55,128 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:05,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:15,507 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:25,644 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:35,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:45,908 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:48,510 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:47:53,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/sendMessage "HTTP/1.1 200 OK"
+2025-12-01 09:47:58,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:08,786 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:12,969 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:13,626 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/sendMessage "HTTP/1.1 200 OK"
+2025-12-01 09:48:23,257 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:24,051 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:25,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-12-01 09:48:25,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/editMessageText "HTTP/1.1 200 OK"
+2025-12-01 09:48:28,529 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:28,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-12-01 09:48:29,107 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/sendMessage "HTTP/1.1 200 OK"
+2025-12-01 09:48:38,728 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:48,976 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:48:59,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:49:09,309 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:49:19,486 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:49:29,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:49:40,389 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:49:50,534 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:00,671 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:10,815 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:21,040 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:31,176 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:41,316 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:50:51,452 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:01,697 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:11,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:22,070 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:32,211 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:42,355 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:51:52,538 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:02,678 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:12,834 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:22,980 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:33,132 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:43,274 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2025-12-01 09:52:53,625 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
