@@ -70,14 +70,19 @@ class VolumeEngine:
             logger.info(f"⏰ Duration: 4 hours")
             logger.info("=" * 70)
             
+            # GENERATE ISOLATED WALLETS FOR THIS SESSION!
+            session_wallets = self.wm.generate_session_wallets(session_id, count=5)
+            if not session_wallets or len(session_wallets) != 5:
+                logger.error(f"❌ Failed to securely generate 5 isolated wallets for session {session_id}")
+                return False
+                
             # Get initial wallet balances
             initial_balances = {}
-            for wallet_index in range(1, 6):
-                wallet = self.wm.get_sub_wallet(wallet_index)
-                if wallet:
-                    balance = self.wm.get_wallet_balance(wallet['address'])
-                    initial_balances[wallet_index] = balance
-                    logger.info(f"💰 Wallet {wallet_index}: {balance:.6f} SUI")
+            for wallet in session_wallets:
+                wallet_index = wallet['index']
+                balance = self.wm.get_wallet_balance(wallet['address'])
+                initial_balances[wallet_index] = balance
+                logger.info(f"💰 Wallet {wallet_index}: {balance:.6f} SUI")
             
             # Store session data
             session_data = {
@@ -144,7 +149,7 @@ class VolumeEngine:
                 # ================================
                 # CHECK WALLET BALANCES
                 # ================================
-                current_balances = await self._get_current_wallet_balances()
+                current_balances = await self._get_current_wallet_balances(session_id)
                 active_wallets = []
                 
                 for wallet_index in range(1, 6):
@@ -243,14 +248,15 @@ class VolumeEngine:
             self.running_tasks.pop(session_id, None)
             logger.info(f"🧹 Cleaned up session {session_id}")
 
-    async def _get_current_wallet_balances(self) -> Dict[int, Decimal]:
-        """Get current balances for all 5 wallets"""
+    async def _get_current_wallet_balances(self, session_id: int) -> Dict[int, Decimal]:
+        """Get current balances for all dynamically generated 5 wallets in the session"""
         balances = {}
-        for wallet_index in range(1, 6):
-            wallet = self.wm.get_sub_wallet(wallet_index)
-            if wallet:
-                balance = self.wm.get_wallet_balance(wallet['address'])
-                balances[wallet_index] = balance
+        session_wallets = self.db.get_session_wallets(session_id)
+        
+        for wallet in session_wallets:
+            wallet_index = wallet['index']
+            balance = self.wm.get_wallet_balance(wallet['address'])
+            balances[wallet_index] = balance
         return balances
 
     async def _execute_all_wallet_buy_sell_cycles(
@@ -284,9 +290,14 @@ class VolumeEngine:
             
             logger.info(f"   Wallet {wallet_index}: Trading {trade_amount:.6f} SUI (70% of {balance:.6f})")
             
+            # Fetch explicit private key instead of passing an index
+            session_wallets = self.db.get_session_wallets(session_id)
+            wallet_data = next((w for w in session_wallets if w['index'] == wallet_index), None)
+            private_key = wallet_data['private_key'] if wallet_data else ""
+            
             # Create buy-sell cycle task
             task = self._execute_single_wallet_buy_sell_cycle(
-                session_id, user_id, token_contract, wallet_index, trade_amount, cycle_number
+                session_id, user_id, token_contract, wallet_index, private_key, trade_amount, cycle_number
             )
             tasks.append(task)
         
@@ -324,6 +335,7 @@ class VolumeEngine:
         user_id: int,
         token_contract: str,
         wallet_index: int,
+        private_key: str,
         trade_amount: Decimal,
         cycle_number: int
     ) -> Dict:
@@ -340,9 +352,9 @@ class VolumeEngine:
             
             logger.info(f"🔄 W{wallet_index} Cycle {cycle_number}: Executing SUI BUY → SELL using Hop...")
             
-            # Execute complete cycle using SuiDexService
+            # Execute complete cycle using isolated dynamically generated wallet key
             swap_result = await self.dex.execute_buy_sell_cycle(
-                wallet_manager=self.wm,
+                private_key=private_key,
                 wallet_index=wallet_index,
                 token_contract=token_contract,
                 amount_sui=trade_amount
@@ -447,7 +459,7 @@ class VolumeEngine:
             trading_amount = deposit - fee
             
             # Get final wallet balances (should be in SUI since tokens were sold back)
-            final_balances = await self._get_current_wallet_balances()
+            final_balances = await self._get_current_wallet_balances(session_id)
             total_remaining = sum(final_balances.values())
             
             completion_message = f"""

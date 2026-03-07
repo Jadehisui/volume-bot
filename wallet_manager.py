@@ -11,10 +11,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+from database import SuiDatabase
+
 logger = logging.getLogger(__name__)
 
 class WalletManager:
-    def __init__(self, rpc_url: Optional[str] = None):
+    def __init__(self, database: SuiDatabase, rpc_url: Optional[str] = None):
+        self.db = database
         # Configuration
         self.rpc_url = os.getenv('RPC_URL', 'https://fullnode.mainnet.sui.io:443')
         
@@ -112,7 +115,40 @@ class WalletManager:
             logger.error(f"❌ Error getting SUI balance for {address}: {e}")
             return Decimal('0')
     
-    def process_deposit(self, deposit_amount: Decimal) -> Dict:
+    def generate_session_wallets(self, session_id: int, count: int = 5) -> list:
+        """Dynamically generate N unique sub-wallets via JS bridge and store them in DB"""
+        try:
+            logger.info(f"🔑 Generating {count} isolated wallets for session {session_id}...")
+            result = subprocess.run(
+                ['node', 'generate_session_wallets.js', str(count)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                err_text = result.stderr.strip() or result.stdout.strip()
+                logger.error(f"❌ Failed to generate session wallets: {err_text}")
+                return []
+                
+            # Filter standard output spam if any
+            output_lines = result.stdout.strip().split('\n')
+            json_line = next(line for line in reversed(output_lines) if line.startswith('{'))
+            data = json.loads(json_line)
+            
+            if data.get('success'):
+                wallets = data.get('wallets', [])
+                self.db.store_session_wallets(session_id, wallets)
+                return wallets
+            else:
+                logger.error(f"❌ JS Generator failed: {data.get('error')}")
+                return []
+                
+        except Exception as e:
+            logger.error(f"❌ Error generating isolated session wallets: {e}")
+            return []
+
+    def process_deposit(self, deposit_amount: Decimal, session_id: int) -> Dict:
         """Process SUI deposit: subtract fee + distribute to 5 wallets"""
         try:
             if deposit_amount < self.MIN_DEPOSIT:
@@ -143,11 +179,16 @@ class WalletManager:
             if not fee_result['success']:
                 return {'success': False, 'error': f'Fee failed: {fee_result.get("error")}'}
             
-            # Send to all 5 wallets
+            # Send to all 5 SESSION specific wallets
             distribution_results = []
             successful_wallets = 0
             
-            for wallet in self.sub_wallets:
+            # Fetch isolated wallets from our database!
+            session_wallets = self.db.get_session_wallets(session_id)
+            if not session_wallets or len(session_wallets) == 0:
+                 return {'success': False, 'error': f'No dynamically generated unique wallets found for session {session_id}!'}
+
+            for wallet in session_wallets:
                 if amount_per_wallet > Decimal('0.001'):
                     result = self._transfer_sui_safe(
                         from_wallet=self.main_wallet,
@@ -178,8 +219,8 @@ class WalletManager:
             logger.error(f"❌ Deposit processing error: {e}")
             return {'success': False, 'error': str(e)}
     
-    def process_variable_deposit(self, deposit_amount: Decimal) -> Dict:
-        return self.process_deposit(deposit_amount)
+    def process_variable_deposit(self, deposit_amount: Decimal, session_id: int) -> Dict:
+        return self.process_deposit(deposit_amount, session_id)
     
     def _transfer_sui_safe(self, from_wallet: Dict, to_address: str, amount_sui: float, description: str = "") -> Dict:
         """Safe SUI transfer via JS bridge"""

@@ -44,18 +44,12 @@ class SuiDexService:
             logger.error(f"❌ Error invoking Cetus swap script: {e}")
             raise
 
-    async def execute_buy_sell_cycle(self, wallet_manager, wallet_index: int, token_contract: str, amount_sui: Decimal) -> dict:
+    async def execute_buy_sell_cycle(self, private_key: str, wallet_index: int, token_contract: str, amount_sui: Decimal) -> dict:
         """
-        Execute complete BUY → SELL cycle for one wallet
+        Execute complete BUY → SELL cycle for one wallet locally using dynamic keys
         BUY: SUI → User's Token
         SELL: User's Token → SUI
         """
-        wallet = wallet_manager.get_sub_wallet(wallet_index)
-        if not wallet:
-            return {'success': False, 'error': f'Wallet {wallet_index} not found'}
-            
-        wallet_address = wallet['address']
-        private_key = wallet['private_key']
         amount_mist = int(amount_sui * Decimal("1000000000"))
         
         result_data = {

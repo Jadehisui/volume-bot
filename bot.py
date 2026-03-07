@@ -45,7 +45,7 @@ class SuiVolumeBot:
         
         # Initialize components
         self.db = SuiDatabase()
-        self.wallet_manager = WalletManager()
+        self.wallet_manager = WalletManager(database=self.db)
         self.volume_engine = VolumeEngine(self.db, self.wallet_manager)
         
         # Get wallet addresses for display
@@ -218,8 +218,14 @@ Then provide your token address again.
                 parse_mode='Markdown'
             )
             
-            # Process deposit (fees + distribute to 5 wallets)
-            deposit_result = self.wallet_manager.process_deposit(self.min_deposit)
+            # Create trading session in database FIRST to get the ID
+            trading_amount = Decimal(str(self.min_deposit - self.fee_amount))
+            session_id = self.db.create_trading_session(
+                user_id, token_contract, float(self.min_deposit), float(trading_amount)
+            )
+            
+            # Process deposit (fees + distribute to 5 SESSION SPECIFIC wallets)
+            deposit_result = self.wallet_manager.process_deposit(self.min_deposit, session_id)
             
             if not deposit_result['success']:
                 await processing_msg.edit_text(
@@ -227,12 +233,6 @@ Then provide your token address again.
                     parse_mode='Markdown'
                 )
                 return
-            
-            # Create trading session in database
-            trading_amount = Decimal(str(deposit_result['amounts']['trading_amount']))
-            session_id = self.db.create_trading_session(
-                user_id, token_contract, float(self.min_deposit), float(trading_amount)
-            )
             
             # Start 4-hour volume generation
             success = await self.volume_engine.start_volume_session(
@@ -446,10 +446,24 @@ Fee Wallet: `{self.fee_wallet_address}`
     async def _send_session_status(self, query, session_id: int):
         """Send session status"""
         try:
+            # First fetch the session status
+            session = self.db.get_session_for_trading(session_id)
+            statusText = "will be available here once the session starts."
+            mnemonicText = ""
+            
+            if session:
+                statusText = f"Status: {session[6]}"
+                
+            # If we have generated session wallets, show them
+            session_wallets = self.db.get_session_wallets(session_id)
+            if session_wallets and len(session_wallets) > 0:
+                mnemonicText = "\n\n🔐 **Your Wallet Keys (DO NOT SHARE):**\n"
+                for w in session_wallets:
+                    mnemonicText += f"Wallet {w['index']} Pk:\n`{w['private_key']}`\n\n"
+                    
             msg = f"""
 📊 **SESSION #{session_id}**
-
-Status information will be available here once the session starts.
+{statusText}
 
 For now, the bot is ready to process deposits!
 
@@ -457,6 +471,7 @@ For now, the bot is ready to process deposits!
 1. Send {self.min_deposit:,}+ SUI to main wallet
 2. Provide token contract address
 3. We'll start 70% volume generation
+{mnemonicText}
             """
             
             keyboard = InlineKeyboardMarkup([
@@ -525,11 +540,7 @@ Reply with your token contract address (0x...) when ready.
             logger.info(f"💸 Fixed fee: {self.fee_amount} SUI")
             
             # Start polling
-            application.run_polling(
-                allowed_updates=Update.ALL_TYPES,
-                drop_pending_updates=True,
-                close_loop=False  # Important for async context
-            )
+            application.run_polling(allowed_updates=Update.ALL_TYPES)
             
         except Exception as e:
             logger.error(f"❌ Bot crashed: {e}", exc_info=True)

@@ -167,3 +167,2291 @@
 2026-03-07 06:37:20,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
 2026-03-07 06:37:30,485 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
 2026-03-07 06:37:40,724 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:37:50,965 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:38:01,202 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:38:16,702 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:38:27,094 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:38:37,275 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:38:50,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:00,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:10,634 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:20,873 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:31,114 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:41,353 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:39:51,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:01,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:12,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:22,233 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:32,690 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:42,863 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:40:53,136 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:03,332 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:13,615 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:23,855 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:34,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:44,234 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:41:54,576 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:05,225 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:15,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:25,650 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:35,842 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:46,082 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:42:56,275 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:06,562 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:16,803 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:27,042 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:37,283 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:47,471 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:43:57,642 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:07,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:18,447 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:28,687 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:38,927 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:49,167 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:44:59,407 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:45:09,588 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:45:19,887 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:45:30,063 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:45:40,265 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:45:50,505 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:46:00,745 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:46:11,601 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:46:22,454 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:46:32,695 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:46:42,934 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:47:23,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:47:34,132 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:47:45,049 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:47:56,006 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:07,065 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:17,308 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:27,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:38,400 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:48,582 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:48:58,779 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:49:09,014 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:49:19,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:49:29,491 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:49:39,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:49:50,072 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:00,312 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:10,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:20,793 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:31,033 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:41,264 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:50:51,513 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:01,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:11,993 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:22,234 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:32,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:42,582 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:51:52,851 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:03,090 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:13,334 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:23,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:33,811 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:44,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:52:54,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:04,633 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:14,874 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:25,117 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:35,353 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:45,531 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:53:55,730 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:05,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:16,313 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:26,570 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:36,792 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:47,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:54:57,273 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:07,513 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:17,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:27,992 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:38,232 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:48,472 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:55:58,712 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:56:08,952 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:56:19,199 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:56:29,433 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:56:39,673 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 06:56:50,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:18:47,515 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:18:48,522 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:18:50,027 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:18:52,283 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:18:55,666 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:19:00,739 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:19:08,343 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:19:19,750 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:19:36,859 - telegram.ext.Application - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 134, in network_retry_loop
+    await do_action()
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 127, in do_action
+    action_cb_task.result()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 676, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 4780, in get_updates
+    await self._post(
+    ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    ),
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+2026-03-07 15:20:23,502 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:20:35,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:20:46,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:20:56,769 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:21:08,641 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:21:58,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:22:12,366 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:22:24,025 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:22:38,042 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:22:51,364 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:23:42,264 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:23:52,603 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:24:02,845 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:24:13,290 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:24:23,530 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:25:32,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:25:42,891 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:25:53,541 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:03,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:14,228 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:24,877 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:35,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:45,564 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:26:55,738 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:05,946 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:16,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:28,160 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:38,459 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:48,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:27:58,992 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:28:09,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:28:19,490 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:28:29,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:28:39,818 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:28:49,976 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:00,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:10,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:20,597 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:30,807 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:40,990 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:29:51,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:01,646 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:12,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:22,374 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:32,862 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:43,093 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:30:53,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:03,617 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:13,855 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:24,095 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:34,335 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:44,577 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:31:54,818 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:05,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:15,296 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:25,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:35,882 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:46,122 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:32:56,453 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:06,708 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:16,948 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:27,149 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:37,306 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:47,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:33:57,710 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:08,151 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:18,543 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:28,750 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:39,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:49,532 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:34:59,774 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:35:09,980 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:35:20,154 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:35:30,394 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:35:40,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:35:50,943 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:01,215 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:11,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:21,609 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:31,779 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:41,937 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:36:54,193 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:37:00,428 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:37:01,499 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:37:01,938 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:37:02,046 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 15:37:02,801 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:37:03,645 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:37:04,401 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 15:37:05,215 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 15:37:06,080 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 15:37:06,944 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 15:37:06,944 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:37:06,944 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:37:06,944 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 15:37:06,944 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 15:37:06,944 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 15:37:06,944 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 15:37:06,944 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:37:06,944 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:37:06,945 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:37:06,945 - __main__ - INFO - ✅ Database initialized
+2026-03-07 15:37:06,945 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 15:37:06,969 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 15:37:06,970 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 15:37:06,970 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 15:37:06,970 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 15:37:14,193 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 15:37:14,946 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:37:14,947 - __main__ - ERROR - ❌ Bot crashed: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 528, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 15:37:14,955 - __main__ - ERROR - ❌ Failed to start bot: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 542, in main
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 528, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 15:38:10,970 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:38:16,608 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:38:17,264 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:38:17,476 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:38:17,570 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 15:38:18,273 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:38:19,043 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:38:19,734 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 15:38:20,356 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 15:38:21,008 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 15:38:21,596 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 15:38:21,596 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:38:21,596 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:38:21,596 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 15:38:21,596 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 15:38:21,596 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 15:38:21,597 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 15:38:21,597 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:38:21,597 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:38:21,597 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:38:21,597 - __main__ - INFO - ✅ Database initialized
+2026-03-07 15:38:21,597 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 15:38:21,615 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 15:38:21,615 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 15:38:21,615 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 15:38:21,616 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 15:38:22,431 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getMe "HTTP/1.1 200 OK"
+2026-03-07 15:38:22,635 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 15:38:22,638 - telegram.ext.Application - INFO - Application started
+2026-03-07 15:38:33,336 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:38:43,511 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:38:53,768 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:04,009 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:14,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:24,491 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:34,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:44,973 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:39:55,214 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:05,414 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:15,697 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:25,889 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:36,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:46,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:40:56,551 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:05,966 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:41:06,801 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:07,032 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:07,641 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:07,858 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:07,951 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 15:41:08,712 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:09,350 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:09,992 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 15:41:10,599 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 15:41:11,187 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 15:41:11,797 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 15:41:11,797 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:11,797 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:41:11,797 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 15:41:11,797 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 15:41:11,797 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 15:41:11,797 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 15:41:11,797 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:11,797 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:41:11,798 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:41:11,798 - __main__ - INFO - ✅ Database initialized
+2026-03-07 15:41:11,798 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 15:41:11,817 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 15:41:11,817 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 15:41:11,817 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 15:41:11,817 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 15:41:17,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:20,218 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 15:41:20,832 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:20,838 - __main__ - ERROR - ❌ Bot crashed: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 528, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 15:41:20,853 - __main__ - ERROR - ❌ Failed to start bot: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 542, in main
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 528, in run
+    application.run_polling(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        allowed_updates=Update.ALL_TYPES,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        drop_pending_updates=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        close_loop=False  # Important for async context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 15:41:27,222 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:37,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:47,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:55,602 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:41:56,546 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:57,214 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:57,431 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:41:57,521 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 15:41:57,839 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:41:58,198 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:58,828 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:41:59,442 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 15:42:00,073 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 15:42:00,762 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 15:42:01,375 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 15:42:01,375 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:42:01,375 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:42:01,375 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 15:42:01,375 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 15:42:01,375 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 15:42:01,375 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 15:42:01,375 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:42:01,375 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:42:01,376 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:42:01,376 - __main__ - INFO - ✅ Database initialized
+2026-03-07 15:42:01,376 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 15:42:01,397 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 15:42:01,397 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 15:42:01,397 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 15:42:01,397 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 15:42:01,914 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getMe "HTTP/1.1 200 OK"
+2026-03-07 15:42:02,078 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 15:42:02,079 - telegram.ext.Application - INFO - Application started
+2026-03-07 15:42:08,015 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:12,656 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:18,285 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:20,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:20,033 - telegram.ext.Application - INFO - Application is stopping. This might take a moment.
+2026-03-07 15:42:20,033 - telegram.ext.Application - INFO - Application.stop() complete
+2026-03-07 15:42:28,528 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:38,870 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:49,214 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:42:59,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:43:09,697 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:43:19,938 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:43:30,180 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:43:40,357 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot7915050099:AAH7egTXgsfZXInw02_yNqOm_B57pb20OpU/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:43:57,110 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:44:02,765 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:44:03,457 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:44:03,736 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 15:44:03,832 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 15:44:04,526 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:44:05,183 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:44:05,803 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 15:44:06,536 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 15:44:07,200 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 15:44:08,034 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 15:44:08,035 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:44:08,035 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:44:08,035 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 15:44:08,035 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 15:44:08,035 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 15:44:08,035 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 15:44:08,035 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 15:44:08,035 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 15:44:08,036 - database - INFO - ✅ Database initialized successfully
+2026-03-07 15:44:08,036 - __main__ - INFO - ✅ Database initialized
+2026-03-07 15:44:08,036 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 15:44:08,057 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 15:44:08,057 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 15:44:08,057 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 15:44:08,057 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 15:44:08,781 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getMe "HTTP/1.1 200 OK"
+2026-03-07 15:44:08,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 15:44:08,991 - telegram.ext.Application - INFO - Application started
+2026-03-07 15:44:09,706 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:09,927 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 15:44:19,936 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:21,397 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:21,982 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 15:44:21,983 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179: 'SuiNullType' object has no attribute 'owner'
+2026-03-07 15:44:22,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 15:44:31,604 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:35,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:35,907 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 15:44:35,908 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179: cannot access local variable 'result' where it is not associated with a value
+2026-03-07 15:44:36,162 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/editMessageText "HTTP/1.1 200 OK"
+2026-03-07 15:44:43,069 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:44:43,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 15:44:43,697 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179: cannot access local variable 'result' where it is not associated with a value
+2026-03-07 15:44:43,895 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/editMessageText "HTTP/1.1 400 Bad Request"
+2026-03-07 15:44:43,896 - __main__ - ERROR - ❌ Balance check error: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-03-07 15:44:44,187 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/editMessageText "HTTP/1.1 200 OK"
+2026-03-07 15:44:53,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:03,544 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:13,778 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:24,018 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:34,253 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:44,448 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:45:54,643 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:04,864 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:15,102 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:25,340 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:35,549 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:45,817 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:46:56,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:06,298 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:16,536 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:26,718 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:36,921 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:47,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:47:57,299 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:07,528 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:17,768 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:28,116 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:38,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:48,590 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:48:58,830 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:49:09,070 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:49:19,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:49:29,562 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:49:39,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:49:50,031 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:00,489 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:10,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:20,887 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:31,196 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:41,437 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:50:51,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:01,919 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:12,261 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:22,501 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:32,742 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:42,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:51:53,119 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:03,360 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:13,600 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:23,832 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:34,079 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:44,272 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:52:54,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:04,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:15,036 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:25,279 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:35,514 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:45,753 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:53:55,941 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:06,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:16,368 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:26,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:36,745 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:46,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:54:57,224 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:07,464 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:17,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:27,942 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:38,184 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:48,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:55:58,662 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:08,854 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:19,039 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:29,225 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:39,416 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:49,655 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:56:59,896 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:57:10,082 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:57:20,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:57:30,616 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:57:40,835 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:57:51,094 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:01,335 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:11,575 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:21,814 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:32,054 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:42,295 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:58:52,534 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:02,774 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:13,015 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:23,212 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:33,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:43,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 15:59:53,872 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:04,112 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:14,353 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:24,593 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:34,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:45,073 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:00:55,631 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:05,859 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:16,101 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:26,282 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:36,581 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:46,774 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:01:56,959 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:02:07,135 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:02:17,337 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:04:58,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:08,416 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:18,594 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:28,791 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:38,963 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:49,204 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:05:59,382 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:06:09,557 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:06:19,798 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:06:29,988 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:06:40,165 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:06:50,496 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:00,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:10,958 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:21,126 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:31,300 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:41,516 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:07:51,917 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:02,099 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:12,341 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:22,580 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:32,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:43,060 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:08:53,249 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:03,445 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:13,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:24,685 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:34,981 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:45,167 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:55,356 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:09:56,124 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:10:01,838 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:10:02,480 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:10:02,696 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:10:02,800 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 16:10:03,422 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:10:03,995 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:10:04,569 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 16:10:05,138 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 16:10:05,601 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:05,718 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 16:10:06,289 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 16:10:06,289 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:10:06,289 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:10:06,289 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 16:10:06,289 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 16:10:06,289 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 16:10:06,289 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 16:10:06,289 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:10:06,289 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:10:06,290 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:10:06,290 - __main__ - INFO - ✅ Database initialized
+2026-03-07 16:10:06,290 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 16:10:06,310 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 16:10:06,310 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 16:10:06,311 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 16:10:06,311 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 16:10:16,171 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:19,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 16:10:20,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:20,351 - __main__ - ERROR - ❌ Bot crashed: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 543, in run
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 16:10:20,369 - __main__ - ERROR - ❌ Failed to start bot: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+Traceback (most recent call last):
+  File "/home/carnage/volume bot /bot.py", line 553, in main
+    bot.run()
+    ~~~~~~~^^
+  File "/home/carnage/volume bot /bot.py", line 543, in run
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 839, in run_polling
+    return self.__run(
+           ~~~~~~~~~~^
+        updater_coroutine=self.updater.start_polling(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        close_loop=close_loop,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 1061, in __run
+    loop.run_until_complete(self.start())
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/ext/_application.py", line 631, in start
+    self._update_fetcher(), name=f"Application:{self.bot.id}:update_fetcher"
+                                                ^^^^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 553, in id
+    return self.bot.id
+           ^^^^^^^^
+  File "/home/carnage/volume bot /.venv/lib/python3.13/site-packages/telegram/_bot.py", line 542, in bot
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` before accessing this property.
+2026-03-07 16:10:26,385 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:36,573 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:46,867 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:10:57,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:07,350 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:18,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:28,341 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:38,581 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:48,822 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:11:59,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:12:09,417 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:12:19,747 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:12:29,987 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:12:40,432 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:12:50,762 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:00,976 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:11,256 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:21,509 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:31,737 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:42,080 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:13:52,982 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:03,174 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:13,824 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:24,184 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:34,390 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:44,577 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:14:54,899 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:15:05,095 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:15:10,725 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:15:11,616 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:15:12,000 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:15:12,173 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 16:15:12,779 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:15:13,403 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:15:13,973 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 16:15:14,526 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 16:15:15,091 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 16:15:15,658 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 16:15:15,658 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:15:15,658 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:15:15,658 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 16:15:15,658 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 16:15:15,659 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 16:15:15,659 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 16:15:15,659 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:15:15,659 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:15:15,659 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:15:15,659 - __main__ - INFO - ✅ Database initialized
+2026-03-07 16:15:15,659 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 16:15:15,683 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 16:15:15,683 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 16:15:15,683 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 16:15:15,683 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 16:15:16,377 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getMe "HTTP/1.1 200 OK"
+2026-03-07 16:15:16,558 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 16:15:16,564 - telegram.ext.Application - INFO - Application started
+2026-03-07 16:15:27,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:15:37,489 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:15:47,729 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:15:57,971 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:08,210 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:18,412 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:28,591 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:38,829 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:49,070 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:16:59,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:17:09,505 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:17:19,692 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:17:29,872 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:17:43,327 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:17:49,696 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:17:50,446 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:17:50,719 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-07 16:17:50,794 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-07 16:17:51,861 - wallet_manager - INFO - ✅ Main wallet loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:17:52,752 - wallet_manager - INFO - ✅ Sub-wallet 1 loaded: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:17:53,634 - wallet_manager - INFO - ✅ Sub-wallet 2 loaded: 0x3891858ece402d7b184521a5a64e925db2542377ccfab0e14f2c00b43b311c53
+2026-03-07 16:17:54,639 - wallet_manager - INFO - ✅ Sub-wallet 3 loaded: 0x4171859b36004519aa0660ac55444493a4441cd88c2b7e5ec13427a4ed4ba81f
+2026-03-07 16:17:55,601 - wallet_manager - INFO - ✅ Sub-wallet 4 loaded: 0x7a0bcdcbc48727d7b63593a8b04b1a647758b7e5cc2d51ab028b472f58727648
+2026-03-07 16:17:56,455 - wallet_manager - INFO - ✅ Sub-wallet 5 loaded: 0x20cbdcaac8c8d9b430040686b86e37cbaec9a48401a76af14e12ccdd6d05ee6e
+2026-03-07 16:17:56,456 - wallet_manager - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:17:56,456 - wallet_manager - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:17:56,456 - wallet_manager - INFO - 📱 5 sub-wallets loaded
+2026-03-07 16:17:56,456 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-07 16:17:56,456 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-07 16:17:56,456 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-07 16:17:56,456 - __main__ - INFO - 💰 Main wallet: 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179
+2026-03-07 16:17:56,456 - __main__ - INFO - 💸 Fee wallet: 0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543
+2026-03-07 16:17:56,457 - database - INFO - ✅ Database initialized successfully
+2026-03-07 16:17:56,457 - __main__ - INFO - ✅ Database initialized
+2026-03-07 16:17:56,457 - __main__ - INFO - 📦 Initialization complete
+2026-03-07 16:17:56,486 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-07 16:17:56,486 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-07 16:17:56,486 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-07 16:17:56,487 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-07 16:17:57,126 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getMe "HTTP/1.1 200 OK"
+2026-03-07 16:17:57,289 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-07 16:17:57,291 - telegram.ext.Application - INFO - Application started
+2026-03-07 16:18:07,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:18:17,944 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:18:23,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:18:24,099 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 16:18:24,100 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179: 'SuiNullType' object has no attribute 'owner'
+2026-03-07 16:18:24,329 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 16:18:33,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:18:43,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:18:54,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:04,164 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:14,381 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:24,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:34,704 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:44,863 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:19:55,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:05,313 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:15,480 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:25,664 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:35,893 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:46,050 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:20:56,272 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:06,432 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:16,651 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:26,819 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:37,653 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:48,518 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:21:58,760 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:09,001 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:19,175 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:29,375 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:39,615 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:46,833 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:22:49,138 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 16:22:56,988 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:07,141 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:17,399 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:27,578 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:32,040 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:32,655 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 16:23:32,859 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 400 Bad Request"
+2026-03-07 16:23:32,862 - __main__ - ERROR - ❌ /status error: Can't parse entities: can't find end of the entity starting at byte offset 158
+2026-03-07 16:23:33,064 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 16:23:42,279 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:23:52,516 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:02,691 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:12,892 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:23,067 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:33,370 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:43,611 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:24:53,810 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:04,007 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:14,177 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:24,341 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:34,605 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:44,845 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:46,283 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:25:46,996 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-07 16:25:47,000 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0xe3948af97a34c86023e7b855b6838fcfcc1a331b35d296d9b7dd326fbaa45179: cannot access local variable 'result' where it is not associated with a value
+2026-03-07 16:25:47,201 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/sendMessage "HTTP/1.1 200 OK"
+2026-03-07 16:25:56,519 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:06,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:17,002 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:27,179 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:37,373 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:47,616 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:26:57,856 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:08,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:18,336 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:28,514 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:38,711 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:48,954 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:27:59,142 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:09,307 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:14,349 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:19,360 - __main__ - ERROR - ❌ Callback error: Timed out
+2026-03-07 16:28:20,032 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/editMessageText "HTTP/1.1 200 OK"
+2026-03-07 16:28:24,506 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:34,726 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:44,929 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:28:55,206 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:05,446 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:15,621 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:25,796 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:36,064 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:46,304 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:29:56,539 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:30:06,788 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:30:17,030 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:30:27,191 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:30:37,410 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:30:50,312 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:00,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:10,723 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:21,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:31,431 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:41,605 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:31:51,775 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:02,100 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:12,260 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:23,033 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:36,700 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:47,262 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:32:58,524 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:33:26,592 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:33:36,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:33:47,301 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:33:57,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:07,781 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:18,146 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:28,324 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:38,521 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:48,697 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:34:58,879 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:35:09,061 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:35:19,239 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:35:29,468 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:35:39,658 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:35:49,948 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:00,911 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:11,149 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:21,389 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:31,626 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:41,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:36:52,106 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:02,289 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:12,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:22,723 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:32,964 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:43,306 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:37:53,482 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:03,652 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:13,829 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:24,062 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:34,304 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:44,645 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:38:54,820 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:05,022 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:15,193 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:25,362 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:35,639 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:47,825 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:39:58,065 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:08,305 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:18,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:28,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:39,024 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:49,249 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:40:59,420 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:41:09,643 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:41:20,479 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:41:30,661 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:41:40,874 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:41:51,055 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:01,252 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:11,431 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:21,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:31,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:42,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"

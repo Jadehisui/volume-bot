@@ -62,6 +62,19 @@ class SuiDatabase:
             )
         ''')
         
+        # Session isolated dynamic wallets
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS session_wallets (
+                wallet_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                session_id INTEGER,
+                wallet_index INTEGER,
+                address TEXT,
+                private_key TEXT,
+                mnemonic TEXT,
+                FOREIGN KEY (session_id) REFERENCES trading_sessions (session_id)
+            )
+        ''')
+        
         # Trades table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS trades (
@@ -218,6 +231,39 @@ class SuiDatabase:
         
         logger.info(f"🆕 Trading session {session_id} for user {user_id}, token {token_contract[:20]}...")
         return session_id
+
+    def store_session_wallets(self, session_id: int, wallets: list):
+        """Store the 5 dynamically generated wallets for a specific session"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        for w in wallets:
+            cursor.execute('''
+                INSERT INTO session_wallets 
+                (session_id, wallet_index, address, private_key, mnemonic)
+                VALUES (?, ?, ?, ?, ?)
+            ''', (session_id, w['index'], w['address'], w['private_key'], w['mnemonic']))
+            
+        conn.commit()
+        conn.close()
+        logger.info(f"🔐 Stored {len(wallets)} unique wallets for session {session_id}")
+
+    def get_session_wallets(self, session_id: int) -> list:
+        """Fetch all dynamically generated sub-wallets for a session"""
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row  # To return dict-like objects
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT wallet_index as 'index', address, private_key, mnemonic 
+            FROM session_wallets 
+            WHERE session_id = ?
+            ORDER BY wallet_index ASC
+        ''', (session_id,))
+        
+        wallets = [dict(row) for row in cursor.fetchall()]
+        conn.close()
+        return wallets
 
     def record_trade(self, user_id, token_contract, sub_wallet_index, action, amount, price, session_id, tx_hash=None):
         """Record a trade execution"""
