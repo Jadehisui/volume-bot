@@ -3,16 +3,16 @@ import asyncio
 import logging
 import time
 from datetime import datetime, timedelta
-from database import MonadDatabase
+from database import SuiDatabase
 from wallet_manager import WalletManager
 
 logger = logging.getLogger(__name__)
 
 class TradingEngine:
-    def __init__(self, database: MonadDatabase, wallet_manager: WalletManager):
+    def __init__(self, database: SuiDatabase, wallet_manager: WalletManager):
         self.db = database
         self.wm = wallet_manager
-        self.MIN_TRADE_AMOUNT = 0.1  # Minimum MONAD per trade
+        self.MIN_TRADE_AMOUNT = 0.1  # Minimum SUI per trade
         self.TRADING_INTERVAL = 60   # 1 minute between cycles
         self.active_sessions = {}    # Track running sessions
         self.is_running = False
@@ -95,7 +95,7 @@ class TradingEngine:
         # Get current session balance
         current_balance = self.get_session_balance(session_id)
         if current_balance < self.MIN_TRADE_AMOUNT:
-            logger.info(f"💰 Session {session_id} balance depleted: {current_balance} MONAD")
+            logger.info(f"💰 Session {session_id} balance depleted: {current_balance} SUI")
             self.db.mark_session_completed(session_id)
             return 0
         
@@ -111,7 +111,7 @@ class TradingEngine:
         if total_trade_amount > current_balance:
             trade_amount_per_wallet = current_balance / 5
         
-        logger.info(f"💸 Cycle {cycle_number}: Trading {trade_amount_per_wallet:.4f} MONAD per wallet")
+        logger.info(f"💸 Cycle {cycle_number}: Trading {trade_amount_per_wallet:.4f} SUI per wallet")
         
         # Execute trades across all wallets
         tasks = []
@@ -131,7 +131,7 @@ class TradingEngine:
                 logger.error(f"❌ Wallet {i} trade failed: {result}")
             elif result and result.get('success'):
                 successful_trades += 1
-                logger.info(f"✅ Wallet {i} trade successful: {result.get('amount', 0):.4f} MONAD")
+                logger.info(f"✅ Wallet {i} trade successful: {result.get('amount', 0):.4f} SUI")
             else:
                 logger.warning(f"⚠️ Wallet {i} trade failed: {result.get('error', 'Unknown error')}")
         
@@ -145,7 +145,7 @@ class TradingEngine:
             if current_balance < trade_amount:
                 return {'success': False, 'reason': 'insufficient_balance'}
             
-            logger.info(f"🔄 Wallet {wallet_index} executing trade: {trade_amount:.4f} MONAD")
+            logger.info(f"🔄 Wallet {wallet_index} executing trade: {trade_amount:.4f} SUI")
             
             # Step 1: Execute buy order
             buy_result = self.wm.execute_immediate_swap(wallet_index, token_contract, trade_amount)
@@ -179,7 +179,7 @@ class TradingEngine:
             
             # Calculate and log profit
             profit = (sell_price - buy_price) * trade_amount
-            logger.info(f"💰 Wallet {wallet_index} profit: {profit:.6f} MONAD")
+            logger.info(f"💰 Wallet {wallet_index} profit: {profit:.6f} SUI")
             
             return {
                 'success': True, 
@@ -249,12 +249,12 @@ class TradingEngine:
 
 📊 **Final Statistics:**
 • Token: `{token_contract[:20]}...`
-• Initial Capital: {trading_amount:,.1f} MONAD
-• Final Balance: {remaining_balance:,.1f} MONAD
+• Initial Capital: {trading_amount:,.1f} SUI
+• Final Balance: {remaining_balance:,.1f} SUI
 • Total Trades: {trade_count:,}
-• Total Volume: {total_traded:,.1f} MONAD
+• Total Volume: {total_traded:,.1f} SUI
 
-💰 **Result:** {profit_loss:+,.1f} MONAD
+💰 **Result:** {profit_loss:+,.1f} SUI
 
 ⏱️ **Session Duration:** {duration}
 
@@ -362,7 +362,7 @@ Need help? Contact support.
 
 # Enhanced Database Methods needed for Trading Engine
 def add_database_methods():
-    """Add these methods to your existing MonadDatabase class"""
+    """Add these methods to your existing SuiDatabase class"""
     
     def get_session_for_trading(self, session_id):
         """Get session details for trading"""
@@ -450,12 +450,12 @@ def add_database_methods():
         """Database connection helper"""
         return sqlite3.connect(self.db_path)
 
-    # Add these methods to MonadDatabase class
-    MonadDatabase.get_session_for_trading = get_session_for_trading
-    MonadDatabase.mark_session_completed = mark_session_completed
-    MonadDatabase.get_session_stats = get_session_stats
-    MonadDatabase.store_completion_message = store_completion_message
-    MonadDatabase.connect = connect
+    # Add these methods to SuiDatabase class
+    SuiDatabase.get_session_for_trading = get_session_for_trading
+    SuiDatabase.mark_session_completed = mark_session_completed
+    SuiDatabase.get_session_stats = get_session_stats
+    SuiDatabase.store_completion_message = store_completion_message
+    SuiDatabase.connect = connect
 
 # Initialize the enhanced database methods
 add_database_methods()

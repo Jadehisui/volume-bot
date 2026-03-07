@@ -1,11 +1,12 @@
-# wallet_manager.py - Complete with all methods
+# wallet_manager.py - Sui Implementation with JS bridge
 import os
+import json
 import logging
+import subprocess
 from decimal import Decimal
 from typing import Dict, List, Optional, Tuple
-from web3 import Web3
-from web3.exceptions import TransactionNotFound, TimeExhausted
-from eth_account import Account
+from pysui import SuiConfig, SyncClient
+from pysui.sui.sui_types.address import SuiAddress
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,53 +16,56 @@ logger = logging.getLogger(__name__)
 class WalletManager:
     def __init__(self, rpc_url: Optional[str] = None):
         # Configuration
-        self.rpc_url = os.getenv('RPC_URL', 'https://rpc.monad.xyz')
-        self.chain_id = int(os.getenv('CHAIN_ID', '143'))
+        self.rpc_url = os.getenv('RPC_URL', 'https://fullnode.mainnet.sui.io:443')
         
-        # Initialize Web3
-        self.w3 = Web3(Web3.HTTPProvider(self.rpc_url))
-        if not self.w3.is_connected():
-            raise ConnectionError(f"❌ Cannot connect to RPC: {self.rpc_url}")
-        
-        logger.info(f"✅ Connected to {self.rpc_url}, chain ID: {self.chain_id}")
+        # Initialize Sui client
+        try:
+            self.cfg = SuiConfig.user_config(rpc_url=self.rpc_url)
+            self.client = SyncClient(self.cfg)
+            logger.info(f"✅ Connected to Sui Node at {self.rpc_url}")
+        except Exception as e:
+            logger.error(f"❌ Failed to initialize Sui client: {e}")
+            raise
         
         # Load wallets
         self.main_wallet = self._load_main_wallet()
         self.sub_wallets = self._load_sub_wallets()
-        self.fee_wallet = os.getenv('FEE_WALLET_ADDRESS', '0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543')
+        self.fee_wallet = os.getenv('FEE_WALLET_ADDRESS', '0x279fedb1e3e5afc9cde877bf7723ebc4fb1c5bf085fcbcc3d6fd80cda07b0ccb')
         
-        # Validate fee wallet address
-        if not self.w3.is_address(self.fee_wallet):
-            raise ValueError(f"Invalid fee wallet address: {self.fee_wallet}")
-        
-        # Configuration
-        self.MIN_DEPOSIT = Decimal('2000')
-        self.FEE_AMOUNT = Decimal('500')
+        # Configuration matches implementation plan amounts
+        self.MIN_DEPOSIT = Decimal('20')  # 20 SUI
+        self.FEE_AMOUNT = Decimal('5')    # 5 SUI
         
         logger.info(f"💰 Main wallet: {self.main_wallet['address']}")
         logger.info(f"💸 Fee wallet: {self.fee_wallet}")
         logger.info(f"📱 {len(self.sub_wallets)} sub-wallets loaded")
     
+    def _get_address_from_key(self, private_key: str) -> str:
+        """Use the JS script to securely extract the address from the suiprivkey"""
+        result = subprocess.run(
+            ['node', 'getKeyInfo.js', private_key],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        if result.returncode != 0:
+            raise ValueError(f"Failed to extract address: {result.stderr.strip()}")
+            
+        data = json.loads(result.stdout.strip())
+        if 'error' in data:
+            raise ValueError(f"Key error: {data['error']}")
+        return data['address']
+
     def _load_main_wallet(self) -> Dict:
         """Load main wallet"""
         private_key = os.getenv('MAIN_WALLET_PRIVATE_KEY', '').strip()
-        
         if not private_key:
             raise ValueError("MAIN_WALLET_PRIVATE_KEY is required")
         
-        # Remove 0x prefix if present
-        if private_key.startswith('0x'):
-            private_key = private_key[2:]
-        
         try:
-            account = Account.from_key(private_key)
-            logger.info(f"✅ Main wallet loaded: {account.address}")
-            
-            return {
-                'address': account.address,
-                'private_key': private_key,
-                'account': account
-            }
+            address = self._get_address_from_key(private_key)
+            logger.info(f"✅ Main wallet loaded: {address}")
+            return {'address': address, 'private_key': private_key}
         except Exception as e:
             logger.error(f"❌ Invalid MAIN_WALLET_PRIVATE_KEY: {e}")
             raise
@@ -69,7 +73,6 @@ class WalletManager:
     def _load_sub_wallets(self) -> List[Dict]:
         """Load all 5 sub-wallets"""
         sub_wallets = []
-        
         for i in range(1, 6):
             env_var = f'SUB_WALLET_{i}_PRIVATE_KEY'
             private_key = os.getenv(env_var, '').strip()
@@ -77,85 +80,63 @@ class WalletManager:
             if not private_key:
                 raise ValueError(f"{env_var} is required")
             
-            # Remove 0x prefix if present
-            if private_key.startswith('0x'):
-                private_key = private_key[2:]
-            
             try:
-                account = Account.from_key(private_key)
-                
-                sub_wallets.append({
-                    'index': i,
-                    'address': account.address,
-                    'private_key': private_key,
-                    'account': account
-                })
-                
-                logger.info(f"✅ Sub-wallet {i} loaded: {account.address}")
+                address = self._get_address_from_key(private_key)
+                sub_wallets.append({'index': i, 'address': address, 'private_key': private_key})
+                logger.info(f"✅ Sub-wallet {i} loaded: {address}")
             except Exception as e:
                 logger.error(f"❌ Invalid {env_var}: {e}")
                 raise
-        
         return sub_wallets
     
     def get_sub_wallet(self, index: int) -> Optional[Dict]:
-        """Get sub-wallet by index (1-5)"""
         if 1 <= index <= len(self.sub_wallets):
             return self.sub_wallets[index - 1]
         return None
     
     def get_wallet_balance(self, address: str) -> Decimal:
-        """Get MONAD balance for a wallet"""
+        """Get SUI balance for a wallet using pysui"""
         try:
-            if not self.w3.is_address(address):
-                logger.error(f"Invalid address: {address}")
-                return Decimal('0')
-            
-            checksum_address = self.w3.to_checksum_address(address)
-            balance_wei = self.w3.eth.get_balance(checksum_address)
-            balance_eth = self.w3.from_wei(balance_wei, 'ether')
-            return Decimal(str(balance_eth))
+            # Query the balance
+            result = self.client.get_coin(SuiAddress(address))
+            if result.is_ok():
+                # sum up balances from coin items if multiple or use totalBalance if accessible
+                # depending on pysui version get_coin might return multiple coins, but the quickest way is:
+                res_data = self.client.get_balance(SuiAddress(address))
+                if res_data.is_ok():
+                    balance_mist = res_data.result_data.total_balance
+                    balance_sui = Decimal(balance_mist) / Decimal('1000000000')
+                    return balance_sui
+            return Decimal('0')
         except Exception as e:
-            logger.error(f"❌ Error getting balance for {address}: {e}")
+            logger.error(f"❌ Error getting SUI balance for {address}: {e}")
             return Decimal('0')
     
     def process_deposit(self, deposit_amount: Decimal) -> Dict:
-        """
-        Process deposit: 500 fee + distribute to 5 wallets
-        """
+        """Process SUI deposit: subtract fee + distribute to 5 wallets"""
         try:
-            # Validate
             if deposit_amount < self.MIN_DEPOSIT:
-                return {
-                    'success': False,
-                    'error': f'Deposit must be at least {self.MIN_DEPOSIT} MONAD'
-                }
+                return {'success': False, 'error': f'Deposit must be at least {self.MIN_DEPOSIT} SUI'}
             
-            # Check main wallet balance
             main_balance = self.get_wallet_balance(self.main_wallet['address'])
             if main_balance < deposit_amount:
-                return {
-                    'success': False,
-                    'error': f'Main wallet has {main_balance:.2f} MONAD, need {deposit_amount} MONAD'
-                }
+                return {'success': False, 'error': f'Main wallet has {main_balance:.4f} SUI, need {deposit_amount} SUI'}
             
-            logger.info(f"💰 Processing deposit: {deposit_amount} MONAD")
+            logger.info(f"💰 Processing deposit: {deposit_amount} SUI")
             
-            # Calculate amounts
             remaining_after_fee = deposit_amount - self.FEE_AMOUNT
-            amount_per_wallet = remaining_after_fee // 5
-            remainder = remaining_after_fee % 5
+            # Just divide float equivalently, round down slightly
+            amount_per_wallet = Decimal(str(int((remaining_after_fee / 5) * 1000000000) / 1000000000))
             
-            logger.info(f"📊 Fee: {self.FEE_AMOUNT} MONAD")
-            logger.info(f"📊 Trading amount: {remaining_after_fee} MONAD")
-            logger.info(f"📤 Per wallet: {amount_per_wallet} MONAD")
-            logger.info(f"💼 Remainder: {remainder} MONAD")
+            logger.info(f"📊 Fee: {self.FEE_AMOUNT} SUI")
+            logger.info(f"📊 Trading amount: {remaining_after_fee} SUI")
+            logger.info(f"📤 Per wallet: {amount_per_wallet} SUI")
             
             # Send fee
-            fee_result = self._transfer_monad_safe(
+            fee_result = self._transfer_sui_safe(
                 from_wallet=self.main_wallet,
                 to_address=self.fee_wallet,
-                amount_monad=float(self.FEE_AMOUNT),
+                amount_sui=float(self.FEE_AMOUNT),
                 description="Fee"
             )
             
@@ -167,12 +148,12 @@ class WalletManager:
             successful_wallets = 0
             
             for wallet in self.sub_wallets:
-                if amount_per_wallet > Decimal('0'):
-                    result = self._transfer_monad_safe(
+                if amount_per_wallet > Decimal('0.001'):
+                    result = self._transfer_sui_safe(
                         from_wallet=self.main_wallet,
                         to_address=wallet['address'],
-                        amount_monad=float(amount_per_wallet),
-                        description=f"To wallet {wallet['index']}"
+                        amount_sui=float(amount_per_wallet),
+                        description=f"To sub-wallet {wallet['index']}"
                     )
                     
                     result['wallet_index'] = wallet['index']
@@ -187,7 +168,6 @@ class WalletManager:
                 'fee_amount': float(self.FEE_AMOUNT),
                 'trading_amount': float(remaining_after_fee),
                 'amount_per_wallet': float(amount_per_wallet),
-                'remainder': float(remainder),
                 'wallets_funded': successful_wallets,
                 'total_wallets': 5,
                 'fee_result': fee_result,
@@ -199,95 +179,62 @@ class WalletManager:
             return {'success': False, 'error': str(e)}
     
     def process_variable_deposit(self, deposit_amount: Decimal) -> Dict:
-        """Process ANY deposit amount (2000+ MONAD) - same as process_deposit"""
         return self.process_deposit(deposit_amount)
     
-    def _transfer_monad_safe(self, from_wallet: Dict, to_address: str, amount_monad: float, description: str = "") -> Dict:
-        """Safe MONAD transfer"""
+    def _transfer_sui_safe(self, from_wallet: Dict, to_address: str, amount_sui: float, description: str = "") -> Dict:
+        """Safe SUI transfer via JS bridge"""
         try:
-            if amount_monad <= 0:
+            if amount_sui <= 0:
                 return {'success': False, 'error': 'Amount must be positive'}
             
-            if not self.w3.is_address(to_address):
-                return {'success': False, 'error': f'Invalid to address: {to_address}'}
-            
-            from_address = from_wallet['address']
             private_key = from_wallet['private_key']
             
-            # Get nonce
-            nonce = self.w3.eth.get_transaction_count(from_address)
+            logger.info(f"📤 Executing transfer to {to_address}...")
             
-            # Build transaction
-            transaction = {
-                'nonce': nonce,
-                'to': self.w3.to_checksum_address(to_address),
-                'value': self.w3.to_wei(amount_monad, 'ether'),
-                'gas': 21000,
-                'gasPrice': self.w3.eth.gas_price,
-                'chainId': self.chain_id
-            }
+            # Call node script
+            result = subprocess.run(
+                ['node', 'transferSui.js', private_key, to_address, str(amount_sui), description],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
             
-            # Check balance
-            total_cost = transaction['value'] + (transaction['gas'] * transaction['gasPrice'])
-            balance_wei = self.w3.eth.get_balance(from_address)
-            
-            if balance_wei < total_cost:
-                needed = self.w3.from_wei(total_cost, 'ether')
-                has = self.w3.from_wei(balance_wei, 'ether')
-                return {
-                    'success': False,
-                    'error': f'Insufficient balance. Need {needed:.6f} MONAD, have {has:.6f} MONAD'
-                }
-            
-            # Sign and send
-            signed_txn = self.w3.eth.account.sign_transaction(transaction, private_key)
-            tx_hash = self.w3.eth.send_raw_transaction(signed_txn.rawTransaction)
-            tx_hash_hex = tx_hash.hex()
-            
-            logger.info(f"📤 Transaction sent: {tx_hash_hex}")
-            
-            # Wait for receipt
-            try:
-                receipt = self.w3.eth.wait_for_transaction_receipt(
-                    tx_hash,
-                    timeout=120,
-                    poll_latency=2
-                )
+            if result.returncode != 0:
+                err_text = result.stderr.strip() or result.stdout.strip()
+                logger.error(f"❌ Transfer failed: {err_text}")
+                return {'success': False, 'error': f'Failed: {err_text}', 'description': description}
                 
-                if receipt.status == 1:
-                    logger.info(f"✅ Transaction confirmed in block {receipt.blockNumber}")
+            try:
+                # the script logs JSON output
+                # find the JSON line if PM2 or something else spammed stdout
+                output_lines = result.stdout.strip().split('\n')
+                json_line = next(line for line in reversed(output_lines) if line.startswith('{'))
+                data = json.loads(json_line)
+                
+                if data.get('success'):
+                    logger.info(f"✅ Transfer confirmed! Digest: {data.get('tx_hash')}")
                     return {
                         'success': True,
-                        'tx_hash': tx_hash_hex,
-                        'amount': amount_monad,
-                        'block_number': receipt.blockNumber,
-                        'gas_used': receipt.gasUsed,
+                        'tx_hash': data.get('tx_hash'),
+                        'amount': amount_sui,
                         'description': description
                     }
                 else:
-                    logger.error(f"❌ Transaction failed (status 0)")
+                    logger.error(f"❌ Transfer failed on-chain: {data.get('error')}")
                     return {
                         'success': False,
-                        'tx_hash': tx_hash_hex,
-                        'error': 'Transaction failed on-chain',
-                        'block_number': receipt.blockNumber
+                        'error': data.get('error'),
+                        'description': description
                     }
-                    
-            except TimeExhausted:
-                logger.error(f"❌ Transaction timeout")
-                return {
-                    'success': False,
-                    'tx_hash': tx_hash_hex,
-                    'error': 'Transaction timeout',
-                    'description': description
-                }
+            except Exception as parse_e:
+                logger.error(f"❌ Failed to parse bridge output: {result.stdout.strip()}")
+                return {'success': False, 'error': str(parse_e), 'description': description}
                 
         except Exception as e:
-            logger.error(f"❌ Transfer error: {e}")
+            logger.error(f"❌ Subprocess error: {e}")
             return {'success': False, 'error': str(e), 'description': description}
     
     def get_all_balances(self) -> Dict:
-        """Get all wallet balances"""
         try:
             balances = {
                 'main_wallet': {
@@ -310,52 +257,35 @@ class WalletManager:
                 })
             
             return balances
-            
         except Exception as e:
             logger.error(f"❌ Error getting balances: {e}")
             return {}
-    
+            
     def validate_wallet_setup(self) -> Tuple[bool, List[str]]:
-        """Validate wallet setup - FIXED VERSION"""
         issues = []
-        
         try:
-            logger.info("🔍 Validating wallet setup...")
+            logger.info("🔍 Validating Sui wallet setup...")
             
-            # Check main wallet
             main_balance = self.get_wallet_balance(self.main_wallet['address'])
-            logger.info(f"💰 Main wallet: {main_balance:.6f} MONAD")
+            logger.info(f"💰 Main wallet: {main_balance:.6f} SUI")
             
-            # Check fee wallet
             if self.fee_wallet:
                 fee_balance = self.get_wallet_balance(self.fee_wallet)
-                logger.info(f"💸 Fee wallet: {fee_balance:.6f} MONAD")
+                logger.info(f"💸 Fee wallet: {fee_balance:.6f} SUI")
             else:
                 issues.append("Fee wallet address not set")
             
-            # Check sub-wallets
             for i in range(1, 6):
                 wallet = self.get_sub_wallet(i)
                 if wallet:
                     balance = self.get_wallet_balance(wallet['address'])
-                    logger.info(f"📱 Wallet {i}: {balance:.6f} MONAD")
+                    logger.info(f"📱 Wallet {i}: {balance:.6f} SUI")
                 else:
                     issues.append(f"Wallet {i} not loaded")
-            
-            # Check RPC
-            try:
-                block = self.w3.eth.block_number
-                logger.info(f"📦 Current block: {block}")
-            except Exception as e:
-                issues.append(f"RPC error: {e}")
-            
+                    
             if issues:
-                logger.warning(f"⚠️ Found issues: {issues}")
                 return False, issues
-            else:
-                logger.info("✅ Wallet setup validated")
-                return True, []
+            return True, []
                 
         except Exception as e:
-            logger.error(f"❌ Validation error: {e}")
-            return False, [f"Validation error: {str(e)}"]
+            return False, [str(e)]

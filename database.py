@@ -5,8 +5,8 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-class MonadDatabase:
-    def __init__(self, db_path="monad_bot.db"):
+class SuiDatabase:
+    def __init__(self, db_path="sui_bot.db"):
         self.db_path = db_path
         self.init_database()
     
@@ -286,22 +286,3 @@ class MonadDatabase:
         conn.commit()
         conn.close()
         logger.info(f"✅ Session {session_id} marked as completed")
-    # In database.py, add to MonadDatabase class:
-
-def create_trading_session(self, user_id, token_contract, original_amount, trading_amount):
-    """Create a new trading session"""
-    conn = self.connect()
-    cursor = conn.cursor()
-    
-    cursor.execute('''
-        INSERT INTO trading_sessions 
-        (user_id, token_contract, original_amount, trading_amount, current_balance)
-        VALUES (?, ?, ?, ?, ?)
-    ''', (user_id, token_contract, original_amount, trading_amount, trading_amount))
-    
-    session_id = cursor.lastrowid
-    conn.commit()
-    conn.close()
-    
-    logger.info(f"🆕 Trading session {session_id} created for user {user_id}")
-    return session_id

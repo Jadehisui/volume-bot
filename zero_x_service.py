@@ -10,6 +10,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from web3 import Web3
 from eth_account import Account
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 
@@ -26,7 +27,8 @@ class ZeroXService:
             logger.warning("⚠️  ZEROX_API_KEY not found in .env - using public API (rate limited)")
         
         # Token addresses - MONAD (correct for Monad chain)
-        self.NATIVE_TOKEN = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"  # Native ETH placeholder
+        # CORRECT: Standard representation for native ETH/MONAD in 0x protocol
+        self.NATIVE_TOKEN = "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A"
         
         # Trading parameters
         self.SLIPPAGE_PERCENTAGE = 1.0  # 1% slippage
@@ -92,7 +94,7 @@ class ZeroXService:
             
             url = f"{self.API_BASE}/swap/v1/quote"
             
-            logger.info(f"📡 Requesting 0x quote: {sell_amount:.6f} MONAD → token")
+            logger.info(f"📡 Requesting 0x quote for {taker_address[:10]}...")
             
             async with aiohttp.ClientSession(headers=self._get_headers()) as session:
                 async with session.get(
@@ -112,131 +114,24 @@ class ZeroXService:
                             sell_amount_wei = Decimal(quote['sellAmount'])
                             quote['sellAmountDecimal'] = sell_amount_wei / Decimal('1e18')
                         
-                        # Log quote details
-                        logger.info(f"📊 0x Quote received:")
-                        logger.info(f"   From: {quote.get('sellAmountDecimal', 0):.6f} MONAD")
-                        logger.info(f"   To: {quote.get('buyAmountDecimal', 0):.6f} tokens")
-                        
-                        if 'estimatedPriceImpact' in quote:
-                            price_impact = float(quote['estimatedPriceImpact']) * 100
-                            quote['priceImpactPercent'] = price_impact
-                            logger.info(f"   Price Impact: {price_impact:.2f}%")
-                        
-                        if 'gasPrice' in quote:
-                            gas_price_gwei = int(quote['gasPrice']) / 1e9
-                            logger.info(f"   Gas Price: {gas_price_gwei:.2f} gwei")
-                        
-                        if 'gas' in quote:
-                            logger.info(f"   Gas Estimate: {quote['gas']}")
-                        
+                        logger.info(f"📊 Quote received: {quote.get('sellAmountDecimal', 0):.6f} → {quote.get('buyAmountDecimal', 0):.6f}")
                         return quote
                     else:
                         error_text = await response.text()
-                        logger.error(f"❌ 0x API Error {response.status}")
+                        logger.error(f"❌ 0x API Error {response.status} for {taker_address[:10]}...")
                         
-                        # Log headers for debugging
-                        logger.error(f"   Response headers: {dict(response.headers)}")
-                        
-                        # Try to parse error message
                         try:
                             error_json = json.loads(error_text)
-                            logger.error(f"   Error JSON: {json.dumps(error_json, indent=2)}")
-                            
                             if 'validationErrors' in error_json:
                                 for err in error_json['validationErrors']:
                                     logger.error(f"   Validation error: {err.get('reason', 'Unknown')}")
-                            elif 'message' in error_json:
-                                logger.error(f"   Message: {error_json['message']}")
-                            elif 'detail' in error_json:
-                                logger.error(f"   Detail: {error_json['detail']}")
-                                
-                        except json.JSONDecodeError:
-                            logger.error(f"   Raw error: {error_text[:500]}")
+                        except:
+                            pass
                         
-                        return None
-                        
-        except asyncio.TimeoutError:
-            logger.error("❌ 0x API timeout")
-            return None
-        except aiohttp.ClientError as e:
-            logger.error(f"❌ HTTP Client error: {e}")
-            return None
-        except Exception as e:
-            logger.error(f"❌ Error getting 0x quote: {e}")
-            return None
-    
-    @retry(
-        stop=stop_after_attempt(2),
-        wait=wait_exponential(multiplier=2, min=3, max=10)
-    )
-    async def get_price(
-        self,
-        sell_token: str,
-        buy_token: str,
-        sell_amount: Decimal
-    ) -> Optional[Dict]:
-        """Get price quote (no transaction data)"""
-        try:
-            sell_amount_wei = int(sell_amount * Decimal('1e18'))
-            
-            params = {
-                "sellToken": sell_token,
-                "buyToken": buy_token,
-                "sellAmount": str(sell_amount_wei),
-                "chainId": self.CHAIN_ID
-            }
-            
-            url = f"{self.API_BASE}/swap/v1/price"
-            
-            async with aiohttp.ClientSession(headers=self._get_headers()) as session:
-                async with session.get(
-                    url,
-                    params=params,
-                    timeout=aiohttp.ClientTimeout(total=self.API_TIMEOUT)
-                ) as response:
-                    if response.status == 200:
-                        price_data = await response.json()
-                        
-                        # Add human-readable amounts
-                        if 'buyAmount' in price_data:
-                            price_data['buyAmountDecimal'] = Decimal(price_data['buyAmount']) / Decimal('1e18')
-                        if 'sellAmount' in price_data:
-                            price_data['sellAmountDecimal'] = Decimal(price_data['sellAmount']) / Decimal('1e18')
-                        
-                        return price_data
-                    else:
-                        error_text = await response.text()
-                        logger.error(f"❌ Price API error {response.status}: {error_text}")
                         return None
                         
         except Exception as e:
-            logger.error(f"❌ Error getting price: {e}")
-            return None
-    
-    async def get_token_pairs(self) -> Optional[Dict]:
-        """Get available token pairs for the chain"""
-        try:
-            params = {
-                "chainId": self.CHAIN_ID
-            }
-            
-            url = f"{self.API_BASE}/swap/v1/token-pairs"
-            
-            async with aiohttp.ClientSession(headers=self._get_headers()) as session:
-                async with session.get(
-                    url,
-                    params=params,
-                    timeout=aiohttp.ClientTimeout(total=self.API_TIMEOUT)
-                ) as response:
-                    if response.status == 200:
-                        return await response.json()
-                    else:
-                        error_text = await response.text()
-                        logger.error(f"❌ Token pairs error {response.status}: {error_text}")
-                        return None
-                        
-        except Exception as e:
-            logger.error(f"❌ Error getting token pairs: {e}")
+            logger.error(f"❌ Error getting 0x quote: {e}")
             return None
     
     async def execute_swap_transaction(
@@ -246,55 +141,61 @@ class ZeroXService:
         wallet_address: str,
         web3_instance: Web3
     ) -> Dict:
-        """Execute swap transaction from 0x quote"""
+        """Execute swap transaction from 0x quote - PROPER SIGNING"""
         try:
             if not quote or 'tx' not in quote:
                 return {'success': False, 'error': 'Invalid quote format'}
             
             tx_data = quote['tx']
             
-            # Build EIP-1559 transaction
+            logger.info(f"🔏 Signing transaction for {wallet_address[:10]}...")
+            
+            # ================================
+            # BUILD TRANSACTION FROM QUOTE DATA
+            # ================================
             transaction = {
-                'to': tx_data.get('to'),
+                'to': web3_instance.to_checksum_address(tx_data.get('to')),
                 'value': int(tx_data.get('value', 0)),
                 'data': tx_data.get('data'),
                 'gas': int(tx_data.get('gas', self.DEFAULT_GAS_LIMIT)),
                 'maxFeePerGas': int(tx_data.get('maxFeePerGas', web3_instance.eth.gas_price)),
                 'maxPriorityFeePerGas': int(tx_data.get('maxPriorityFeePerGas', self.PRIORITY_FEE)),
                 'chainId': self.CHAIN_ID,
-                'type': 2  # EIP-1559
+                'type': 2,  # EIP-1559
+                'nonce': web3_instance.eth.get_transaction_count(wallet_address)
             }
             
-            # Get nonce
-            transaction['nonce'] = web3_instance.eth.get_transaction_count(wallet_address)
+            # IMPORTANT: For native token swaps, we might need to adjust gas
+            if transaction['value'] > 0 and transaction['gas'] < 21000:
+                transaction['gas'] = 21000  # Minimum gas for value transfers
             
             # Validate transaction
             if not transaction['to']:
                 return {'success': False, 'error': 'No recipient in transaction'}
             
-            # Estimate gas if not provided
-            if transaction['gas'] == 0:
-                try:
-                    estimated_gas = web3_instance.eth.estimate_gas(transaction)
-                    transaction['gas'] = int(estimated_gas * 1.2)  # 20% buffer
-                    logger.info(f"   Gas estimated: {estimated_gas}, using {transaction['gas']}")
-                except Exception as gas_error:
-                    logger.warning(f"⚠️ Gas estimation failed: {gas_error}")
-                    transaction['gas'] = self.DEFAULT_GAS_LIMIT
+            logger.info(f"   To: {transaction['to'][:20]}...")
+            logger.info(f"   Value: {web3_instance.from_wei(transaction['value'], 'ether'):.6f} MONAD")
+            logger.info(f"   Gas: {transaction['gas']}")
+            logger.info(f"   Nonce: {transaction['nonce']}")
             
-            # Sign transaction
+            # ================================
+            # SIGN THE TRANSACTION
+            # ================================
             signed_txn = web3_instance.eth.account.sign_transaction(transaction, private_key)
             
-            # Send transaction
+            # ================================
+            # SEND SIGNED TRANSACTION
+            # ================================
+            logger.info(f"📤 Sending signed transaction...")
             tx_hash = web3_instance.eth.send_raw_transaction(signed_txn.rawTransaction)
             tx_hash_hex = tx_hash.hex()
             
-            logger.info(f"📤 Swap transaction sent: {tx_hash_hex}")
-            logger.info(f"   Value: {web3_instance.from_wei(transaction['value'], 'ether'):.6f} MONAD")
-            logger.info(f"   Gas: {transaction['gas']}")
-            logger.info(f"   Max Fee: {transaction['maxFeePerGas'] / 1e9:.2f} gwei")
+            logger.info(f"✅ Transaction sent: {tx_hash_hex[:20]}...")
             
-            # Wait for receipt
+            # ================================
+            # WAIT FOR CONFIRMATION
+            # ================================
+            logger.info(f"⏳ Waiting for confirmation...")
             try:
                 receipt = web3_instance.eth.wait_for_transaction_receipt(
                     tx_hash,
@@ -403,7 +304,7 @@ class ZeroXService:
             # ============================
             logger.info(f"🛒 Getting buy quote...")
             buy_quote = await self.get_swap_quote(
-                sell_token=self.NATIVE_TOKEN,    # MONAD (native token)
+                sell_token=self.NATIVE_TOKEN,    # MONAD (native token - CORRECTED!)
                 buy_token=token_contract,        # User's token
                 sell_amount=amount_monad,
                 taker_address=wallet_address
@@ -430,9 +331,9 @@ class ZeroXService:
                 }
             
             # ============================
-            # STEP 3: EXECUTE BUY
+            # STEP 3: SIGN AND EXECUTE BUY
             # ============================
-            logger.info(f"💸 Executing buy transaction...")
+            logger.info(f"💸 Signing and executing buy transaction...")
             buy_result = await self.execute_swap_transaction(
                 buy_quote,
                 private_key,
@@ -453,7 +354,7 @@ class ZeroXService:
             estimated_tokens_bought = Decimal(str(buy_result.get('buy_amount', amount_monad)))
             
             logger.info(f"✅ Buy successful: {estimated_tokens_bought:.6f} {token_info.get('symbol', 'tokens')}")
-            logger.info(f"   TX: {buy_tx_hash[:20]}...")
+            logger.info(f"   TX: {buy_tx_hash}")
             
             # ============================
             # STEP 4: WAIT FOR CONFIRMATION
@@ -483,7 +384,7 @@ class ZeroXService:
             logger.info(f"💰 Getting sell quote...")
             sell_quote = await self.get_swap_quote(
                 sell_token=token_contract,        # User's token
-                buy_token=self.NATIVE_TOKEN,      # Back to MONAD
+                buy_token=self.NATIVE_TOKEN,      # Back to MONAD (native token)
                 sell_amount=tokens_to_sell,
                 taker_address=wallet_address,
                 skip_validation=True  # Skip validation for immediate sell
@@ -500,9 +401,9 @@ class ZeroXService:
                 }
             
             # ============================
-            # STEP 7: EXECUTE SELL
+            # STEP 7: SIGN AND EXECUTE SELL
             # ============================
-            logger.info(f"💸 Executing sell transaction...")
+            logger.info(f"💸 Signing and executing sell transaction...")
             sell_result = await self.execute_swap_transaction(
                 sell_quote,
                 private_key,
@@ -524,7 +425,7 @@ class ZeroXService:
             monad_received = Decimal(str(sell_result.get('buy_amount', amount_monad)))
             
             logger.info(f"✅ Sell successful: {monad_received:.6f} MONAD received")
-            logger.info(f"   TX: {sell_tx_hash[:20]}...")
+            logger.info(f"   TX: {sell_tx_hash}")
             
             # ============================
             # STEP 8: CALCULATE RESULTS
@@ -588,16 +489,164 @@ class ZeroXService:
                 'stage': 'unknown'
             }
     
-    # ... (keep all the other methods: check_token_allowance, get_token_balance, etc.)
-
-# Add to your .env file:
-"""
-# 0x.org API Configuration
-ZEROX_API_KEY=your_0x_api_key_here
-"""
-
-# Helper function for datetime import
-from datetime import datetime
-
-# Ensure all required imports
-__all__ = ['ZeroXService']
+    async def get_token_info(self, token_address: str, web3: Web3) -> Dict:
+        """Get token information (symbol, name, decimals)"""
+        try:
+            # ABI for ERC20 token
+            token_abi = [
+                {
+                    "constant": True,
+                    "inputs": [],
+                    "name": "name",
+                    "outputs": [{"name": "", "type": "string"}],
+                    "type": "function"
+                },
+                {
+                    "constant": True,
+                    "inputs": [],
+                    "name": "symbol",
+                    "outputs": [{"name": "", "type": "string"}],
+                    "type": "function"
+                },
+                {
+                    "constant": True,
+                    "inputs": [],
+                    "name": "decimals",
+                    "outputs": [{"name": "", "type": "uint8"}],
+                    "type": "function"
+                }
+            ]
+            
+            token_contract = web3.eth.contract(address=web3.to_checksum_address(token_address), abi=token_abi)
+            
+            name = token_contract.functions.name().call()
+            symbol = token_contract.functions.symbol().call()
+            decimals = token_contract.functions.decimals().call()
+            
+            return {
+                'address': token_address,
+                'name': name,
+                'symbol': symbol,
+                'decimals': decimals
+            }
+            
+        except Exception as e:
+            logger.error(f"❌ Error getting token info: {e}")
+            # Return defaults
+            return {
+                'address': token_address,
+                'name': 'Unknown Token',
+                'symbol': 'UNKNOWN',
+                'decimals': 18
+            }
+    
+    async def get_token_balance(self, token_address: str, wallet_address: str, web3: Web3) -> Decimal:
+        """Get token balance for a wallet"""
+        try:
+            # ABI for balanceOf
+            token_abi = [
+                {
+                    "constant": True,
+                    "inputs": [{"name": "_owner", "type": "address"}],
+                    "name": "balanceOf",
+                    "outputs": [{"name": "balance", "type": "uint256"}],
+                    "type": "function"
+                },
+                {
+                    "constant": True,
+                    "inputs": [],
+                    "name": "decimals",
+                    "outputs": [{"name": "", "type": "uint8"}],
+                    "type": "function"
+                }
+            ]
+            
+            token_contract = web3.eth.contract(address=web3.to_checksum_address(token_address), abi=token_abi)
+            
+            # Get decimals
+            try:
+                decimals = token_contract.functions.decimals().call()
+            except:
+                decimals = 18
+            
+            # Get balance
+            balance_wei = token_contract.functions.balanceOf(web3.to_checksum_address(wallet_address)).call()
+            balance = Decimal(balance_wei) / Decimal(10 ** decimals)
+            
+            return balance
+            
+        except Exception as e:
+            logger.error(f"❌ Error getting token balance: {e}")
+            return Decimal('0')
+    
+    async def check_token_allowance(self, token_address: str, wallet_address: str, spender: str, web3: Web3) -> Decimal:
+        """Check token allowance for 0x protocol spender"""
+        try:
+            # ABI for allowance
+            token_abi = [
+                {
+                    "constant": True,
+                    "inputs": [
+                        {"name": "_owner", "type": "address"},
+                        {"name": "_spender", "type": "address"}
+                    ],
+                    "name": "allowance",
+                    "outputs": [{"name": "", "type": "uint256"}],
+                    "type": "function"
+                },
+                {
+                    "constant": True,
+                    "inputs": [],
+                    "name": "decimals",
+                    "outputs": [{"name": "", "type": "uint8"}],
+                    "type": "function"
+                }
+            ]
+            
+            token_contract = web3.eth.contract(address=web3.to_checksum_address(token_address), abi=token_abi)
+            
+            # Get decimals
+            try:
+                decimals = token_contract.functions.decimals().call()
+            except:
+                decimals = 18
+            
+            # Get allowance
+            allowance_wei = token_contract.functions.allowance(
+                web3.to_checksum_address(wallet_address),
+                web3.to_checksum_address(spender)
+            ).call()
+            
+            allowance = Decimal(allowance_wei) / Decimal(10 ** decimals)
+            
+            return allowance
+            
+        except Exception as e:
+            logger.error(f"❌ Error checking allowance: {e}")
+            return Decimal('0')
+    
+    async def get_token_pairs(self) -> Optional[Dict]:
+        """Get available token pairs for the chain"""
+        try:
+            params = {
+                "chainId": self.CHAIN_ID
+            }
+            
+            url = f"{self.API_BASE}/swap/v1/token-pairs"
+            
+            async with aiohttp.ClientSession(headers=self._get_headers()) as session:
+                async with session.get(
+                    url,
+                    params=params,
+                    timeout=aiohttp.ClientTimeout(total=self.API_TIMEOUT)
+                ) as response:
+                    if response.status == 200:
+                        return await response.json()
+                    else:
+                        error_text = await response.text()
+                        logger.error(f"❌ Token pairs error {response.status}: {error_text}")
+                        return None
+                        
+        except Exception as e:
+            logger.error(f"❌ Error getting token pairs: {e}")
+            return None

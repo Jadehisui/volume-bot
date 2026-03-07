@@ -6,19 +6,20 @@ from datetime import datetime, timedelta
 import json
 from typing import Dict, List, Optional, Tuple
 
-from database import MonadDatabase
+from database import SuiDatabase
 from wallet_manager import WalletManager
-from zero_x_service import ZeroXService
+from sui_dex_service import SuiDexService
 
 logger = logging.getLogger(__name__)
 
 class VolumeEngine:
     """Engine that handles BUY → IMMEDIATE SELL swaps on user's token for all 5 wallets"""
     
-    def __init__(self, database: MonadDatabase, wallet_manager: WalletManager):
+    def __init__(self, database: SuiDatabase, wallet_manager: WalletManager):
         self.db = database
         self.wm = wallet_manager
-        self.zero_x = ZeroXService()
+        # Initialize Sui DEX service instead of 0x
+        self.dex = SuiDexService()
         
         # Trading parameters - 70% PER TRADE (EXTREME)
         self.TRADING_INTERVAL = 60  # 1 minute between cycles
@@ -37,7 +38,7 @@ class VolumeEngine:
     async def start_volume_session(self, session_id: int, token_contract: str, deposit_amount: Decimal):
         """
         Start volume generation for a user's token contract
-        deposit_amount: Total amount user deposited (2000+ MONAD)
+        deposit_amount: Total amount user deposited (2000+ SUI)
         """
         try:
             # Get session details
@@ -60,11 +61,11 @@ class VolumeEngine:
             logger.info(f"🚀 STARTING VOLUME SESSION #{session_id}")
             logger.info(f"👤 User: {user_id}")
             logger.info(f"📝 Token: {token_contract[:20]}...")
-            logger.info(f"💰 Deposit: {deposit_amount} MONAD")
-            logger.info(f"💸 Fee: {fee_amount} MONAD")
-            logger.info(f"📊 Trading amount: {trading_amount} MONAD")
-            logger.info(f"📤 Per wallet: {amount_per_wallet} MONAD")
-            logger.info(f"💼 Remainder: {remainder} MONAD stays in main")
+            logger.info(f"💰 Deposit: {deposit_amount} SUI")
+            logger.info(f"💸 Fee: {fee_amount} SUI")
+            logger.info(f"📊 Trading amount: {trading_amount} SUI")
+            logger.info(f"📤 Per wallet: {amount_per_wallet} SUI")
+            logger.info(f"💼 Remainder: {remainder} SUI stays in main")
             logger.info(f"⚡ Trade percentage: {self.TRADE_PERCENTAGE*100}% per cycle")
             logger.info(f"⏰ Duration: 4 hours")
             logger.info("=" * 70)
@@ -76,7 +77,7 @@ class VolumeEngine:
                 if wallet:
                     balance = self.wm.get_wallet_balance(wallet['address'])
                     initial_balances[wallet_index] = balance
-                    logger.info(f"💰 Wallet {wallet_index}: {balance:.6f} MONAD")
+                    logger.info(f"💰 Wallet {wallet_index}: {balance:.6f} SUI")
             
             # Store session data
             session_data = {
@@ -150,9 +151,9 @@ class VolumeEngine:
                     balance = current_balances.get(wallet_index, Decimal('0'))
                     if balance >= self.MIN_TRADE_AMOUNT:
                         active_wallets.append(wallet_index)
-                        logger.info(f"   Wallet {wallet_index}: {balance:.6f} MONAD available")
+                        logger.info(f"   Wallet {wallet_index}: {balance:.6f} SUI available")
                     else:
-                        logger.warning(f"   Wallet {wallet_index}: Insufficient balance ({balance:.6f} MONAD)")
+                        logger.warning(f"   Wallet {wallet_index}: Insufficient balance ({balance:.6f} SUI)")
                 
                 # Update active wallets
                 session_data['active_wallets'] = active_wallets
@@ -177,8 +178,8 @@ class VolumeEngine:
                 # ================================
                 successful_swaps = sum(1 for r in results if r.get('success'))
                 total_profit = sum(Decimal(str(r.get('profit', 0))) for r in results if r.get('success'))
-                total_buy_volume = sum(Decimal(str(r.get('monad_spent', 0))) for r in results if r.get('success'))
-                total_sell_volume = sum(Decimal(str(r.get('monad_received', 0))) for r in results if r.get('success'))
+                total_buy_volume = sum(Decimal(str(r.get('sui_spent', 0))) for r in results if r.get('success'))
+                total_sell_volume = sum(Decimal(str(r.get('sui_received', 0))) for r in results if r.get('success'))
                 total_volume = total_buy_volume + total_sell_volume
                 
                 # Update session data
@@ -193,10 +194,10 @@ class VolumeEngine:
                 if successful_swaps > 0:
                     session_data['consecutive_failures'] = 0
                     logger.info(f"✅ CYCLE {cycle_number} COMPLETE: {successful_swaps}/{len(active_wallets)} wallets")
-                    logger.info(f"   Buy Volume: {total_buy_volume:.2f} MONAD")
-                    logger.info(f"   Sell Volume: {total_sell_volume:.2f} MONAD")
-                    logger.info(f"   Total Volume: {total_volume:.2f} MONAD")
-                    logger.info(f"   Profit: {total_profit:.6f} MONAD")
+                    logger.info(f"   Buy Volume: {total_buy_volume:.2f} SUI")
+                    logger.info(f"   Sell Volume: {total_sell_volume:.2f} SUI")
+                    logger.info(f"   Total Volume: {total_volume:.2f} SUI")
+                    logger.info(f"   Profit: {total_profit:.6f} SUI")
                 else:
                     session_data['consecutive_failures'] += 1
                     logger.warning(f"⚠️ CYCLE {cycle_number} failed: {session_data['consecutive_failures']} consecutive failures")
@@ -281,7 +282,7 @@ class VolumeEngine:
             if trade_amount > balance:
                 trade_amount = balance
             
-            logger.info(f"   Wallet {wallet_index}: Trading {trade_amount:.6f} MONAD (70% of {balance:.6f})")
+            logger.info(f"   Wallet {wallet_index}: Trading {trade_amount:.6f} SUI (70% of {balance:.6f})")
             
             # Create buy-sell cycle task
             task = self._execute_single_wallet_buy_sell_cycle(
@@ -311,7 +312,7 @@ class VolumeEngine:
                 if result.get('success'):
                     profit = result.get('profit', 0)
                     profit_percentage = result.get('profit_percentage', 0)
-                    logger.info(f"✅ Wallet {wallet_index}: {profit_percentage:+.4f}% ({profit:.6f} MONAD)")
+                    logger.info(f"✅ Wallet {wallet_index}: {profit_percentage:+.4f}% ({profit:.6f} SUI)")
                 else:
                     logger.warning(f"⚠️ Wallet {wallet_index} failed: {result.get('error', 'Unknown')}")
         
@@ -332,31 +333,31 @@ class VolumeEngine:
                 return {
                     'success': False,
                     'wallet_index': wallet_index,
-                    'error': f'Amount too small: {trade_amount:.6f} MONAD',
+                    'error': f'Amount too small: {trade_amount:.6f} SUI',
                     'trade_amount': float(trade_amount),
                     'cycle_number': cycle_number
                 }
             
-            logger.info(f"🔥 Wallet {wallet_index}: BUY→SELL {trade_amount:.6f} MONAD")
+            logger.info(f"🔄 W{wallet_index} Cycle {cycle_number}: Executing SUI BUY → SELL using Hop...")
             
-            # Use 0x.org service for the complete buy-sell cycle
-            result = await self.zero_x.execute_buy_sell_cycle(
+            # Execute complete cycle using SuiDexService
+            swap_result = await self.dex.execute_buy_sell_cycle(
                 wallet_manager=self.wm,
                 wallet_index=wallet_index,
                 token_contract=token_contract,
-                amount_monad=trade_amount
+                amount_sui=trade_amount
             )
             
             # Add session info to result
-            result['session_id'] = session_id
-            result['user_id'] = user_id
-            result['cycle_number'] = cycle_number
-            result['token_contract'] = token_contract
-            result['trade_amount'] = float(trade_amount)
-            result['trade_percentage'] = 70.0
-            result['timestamp'] = datetime.now().isoformat()
+            swap_result['session_id'] = session_id
+            swap_result['user_id'] = user_id
+            swap_result['cycle_number'] = cycle_number
+            swap_result['token_contract'] = token_contract
+            swap_result['trade_amount'] = float(trade_amount)
+            swap_result['trade_percentage'] = 70.0
+            swap_result['timestamp'] = datetime.now().isoformat()
             
-            return result
+            return swap_result
             
         except Exception as e:
             logger.error(f"❌ Buy-sell cycle failed for wallet {wallet_index}: {e}")
@@ -378,45 +379,51 @@ class VolumeEngine:
             trade_amount = swap_result.get('trade_amount', 0)
             profit = swap_result.get('profit', 0)
             
-            # Record buy trade
+            # Record buy trade - BUYING TOKEN with SUI
             self.db.record_trade(
                 user_id=user_id,
                 token_contract=token_contract,
                 sub_wallet_index=wallet_index,
                 action='buy',
-                amount=swap_result.get('monad_spent', trade_amount),
+                amount=swap_result.get('sui_spent', trade_amount),
                 price=1.0,
                 session_id=session_id,
                 tx_hash=swap_result.get('buy_tx_hash'),
                 profit_loss=profit,
                 cycle_number=cycle_number,
-                trade_percentage=70.0
+                trade_percentage=70.0,
+                token_amount=swap_result.get('tokens_bought', 0)  # Add token amount for buy
             )
             
-            # Record sell trade
+            # Record sell trade - SELLING TOKEN for SUI (BACK TO NATIVE TOKEN)
+            # IMPORTANT: For sell action, the 'amount' should be SUI received (not token amount)
+            # This is the key fix - we're selling tokens back to get SUI
             self.db.record_trade(
                 user_id=user_id,
                 token_contract=token_contract,
                 sub_wallet_index=wallet_index,
                 action='sell',
-                amount=swap_result.get('monad_received', trade_amount),
+                amount=swap_result.get('sui_received', 0),  # SUI received from selling tokens
                 price=1.0,
                 session_id=session_id,
                 tx_hash=swap_result.get('sell_tx_hash'),
                 profit_loss=profit,
                 cycle_number=cycle_number,
-                trade_percentage=70.0
+                trade_percentage=70.0,
+                token_amount=swap_result.get('tokens_sold', 0)  # Token amount sold
             )
             
             # Update session volume
-            buy_volume = swap_result.get('monad_spent', trade_amount)
-            sell_volume = swap_result.get('monad_received', trade_amount)
+            buy_volume = swap_result.get('sui_spent', trade_amount)
+            sell_volume = swap_result.get('sui_received', 0)  # SUI received from sell
             total_volume = buy_volume + sell_volume
             
             self.db.update_session_volume(session_id, total_volume)
             self.db.update_session_profit(session_id, profit)
             
             logger.debug(f"📝 Recorded swap for wallet {wallet_index}, cycle {cycle_number}")
+            logger.debug(f"   Buy: {buy_volume:.6f} SUI spent for tokens")
+            logger.debug(f"   Sell: {sell_volume:.6f} SUI received for tokens")
             
         except Exception as e:
             logger.error(f"❌ Error recording swap in DB: {e}")
@@ -439,7 +446,7 @@ class VolumeEngine:
             fee = session_data.get('fee_amount', Decimal('500'))
             trading_amount = deposit - fee
             
-            # Get final wallet balances
+            # Get final wallet balances (should be in SUI since tokens were sold back)
             final_balances = await self._get_current_wallet_balances()
             total_remaining = sum(final_balances.values())
             
@@ -447,29 +454,29 @@ class VolumeEngine:
 {'❌' if failed else '✅'} **VOLUME SESSION #{session_id} COMPLETED**
 
 📊 **Deposit Statistics:**
-• Total Deposit: {float(deposit):,.2f} MONAD
-• Fee Collected: {float(fee)} MONAD
-• Trading Amount: {float(trading_amount):,.2f} MONAD
-• Remainder in Main: {float(session_data.get('remainder', 0)):,} MONAD
+• Total Deposit: {float(deposit):,.2f} SUI
+• Fee Collected: {float(fee)} SUI
+• Trading Amount: {float(trading_amount):,.2f} SUI
+• Remainder in Main: {float(session_data.get('remainder', 0)):,} SUI
 
 📈 **Trading Performance:**
 • Cycles Completed: {cycles}
 • Total Trades: {trades} (Buy + Sell)
-• Buy Volume: {float(buy_volume):,.2f} MONAD
-• Sell Volume: {float(sell_volume):,.2f} MONAD
-• Total Volume: {float(total_volume):,.2f} MONAD
-• Total Profit: {float(total_profit):+.6f} MONAD
-• Remaining in Wallets: {float(total_remaining):,.6f} MONAD
+• Buy Volume: {float(buy_volume):,.2f} SUI (SUI → Token)
+• Sell Volume: {float(sell_volume):,.2f} SUI (Token → SUI)
+• Total Volume: {float(total_volume):,.2f} SUI
+• Total Profit: {float(total_profit):+.6f} SUI
+• Remaining in Wallets: {float(total_remaining):,.6f} SUI
 
 🎯 **Trading Strategy:**
 • Wallets: 5 active
 • Trade Size: 70% of current balance
-• Cycle: BUY → IMMEDIATE SELL → Wait 1 minute
+• Cycle: BUY (SUI → Token) → IMMEDIATE SELL (Token → SUI) → Wait 1 minute
 • Duration: 4 hours target
 
 📝 **Status:** {message}
 
-💰 **Funds remain in sub-wallets for withdrawal**
+💰 **Funds remain in sub-wallets for withdrawal (in SUI)**
 🚀 **Ready for another token?** Use /deposit
             """
             
@@ -481,9 +488,11 @@ class VolumeEngine:
             logger.info(f"📊 SESSION #{session_id} FINAL STATISTICS")
             logger.info(f"• Cycles: {cycles}")
             logger.info(f"• Trades: {trades}")
-            logger.info(f"• Total Volume: {float(total_volume):,.2f} MONAD")
-            logger.info(f"• Total Profit: {float(total_profit):+.6f} MONAD")
-            logger.info(f"• Remaining in Wallets: {float(total_remaining):,.6f} MONAD")
+            logger.info(f"• Buy Volume (SUI spent): {float(buy_volume):,.2f} SUI")
+            logger.info(f"• Sell Volume (SUI received): {float(sell_volume):,.2f} SUI")
+            logger.info(f"• Total Volume: {float(total_volume):,.2f} SUI")
+            logger.info(f"• Total Profit: {float(total_profit):+.6f} SUI")
+            logger.info(f"• Remaining in Wallets: {float(total_remaining):,.6f} SUI")
             logger.info(f"• Status: {'FAILED' if failed else 'COMPLETED'}")
             logger.info("=" * 70)
             
@@ -511,7 +520,7 @@ class VolumeEngine:
         minutes_remaining = int((time_remaining % 3600) // 60)
         seconds_remaining = int(time_remaining % 60)
         
-        # Get current balances
+        # Get current balances (should be in SUI)
         current_balances = session_data.get('current_balances', {})
         total_current_balance = sum(current_balances.values())
         
@@ -541,7 +550,8 @@ class VolumeEngine:
             'start_time': session_data['start_time'].strftime('%H:%M:%S'),
             'end_time': session_data['end_time'].strftime('%H:%M:%S'),
             'estimated_completion': session_data['end_time'].strftime('%H:%M:%S'),
-            'is_running': True
+            'is_running': True,
+            'trading_strategy': 'BUY (SUI → Token) → SELL (Token → SUI)'
         }
 
     def get_active_sessions_info(self) -> Dict[int, Dict]:
@@ -613,7 +623,7 @@ class VolumeEngine:
                 'cycles': session_data.get('cycles_completed', 0),
                 'consecutive_failures': session_data.get('consecutive_failures', 0),
                 'active_wallets': session_data.get('active_wallets', []),
-                'strategy': 'BUY→IMMEDIATE_SELL',
+                'strategy': 'BUY (SUI → Token) → IMMEDIATE SELL (Token → SUI)',
                 'trade_percentage': '70%',
                 'interval_seconds': self.TRADING_INTERVAL
             }

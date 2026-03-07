@@ -15,7 +15,7 @@ from telegram.ext import (
 )
 from dotenv import load_dotenv
 
-from database import MonadDatabase
+from database import SuiDatabase
 from wallet_manager import WalletManager
 from volume_engine import VolumeEngine
 
@@ -26,13 +26,13 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
     handlers=[
-        logging.FileHandler('monad_volume_bot.log'),
+        logging.FileHandler('sui_volume_bot.log'),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-class MonadVolumeBot:
+class SuiVolumeBot:
     def __init__(self):
         # Load Telegram token
         self.token = os.getenv("TELEGRAM_API_KEY")
@@ -40,11 +40,11 @@ class MonadVolumeBot:
             raise ValueError("❌ TELEGRAM_API_KEY is required in .env")
         
         # Bot configuration
-        self.min_deposit = Decimal('2000')
-        self.fee_amount = Decimal('500')
+        self.min_deposit = Decimal('20')
+        self.fee_amount = Decimal('2')
         
         # Initialize components
-        self.db = MonadDatabase()
+        self.db = SuiDatabase()
         self.wallet_manager = WalletManager()
         self.volume_engine = VolumeEngine(self.db, self.wallet_manager)
         
@@ -55,7 +55,7 @@ class MonadVolumeBot:
         # User states
         self.user_states = {}  # {user_id: {'state': 'awaiting_token', 'data': {}}}
         
-        logger.info("✅ Monad Volume Bot initialized")
+        logger.info("✅ Sui Volume Bot initialized")
         logger.info(f"💰 Main wallet: {self.main_wallet_address}")
         logger.info(f"💸 Fee wallet: {self.fee_wallet_address}")
         
@@ -64,9 +64,8 @@ class MonadVolumeBot:
             self.db.init_database()
             logger.info("✅ Database initialized")
             
-            # Check RPC connection
-            block = self.wallet_manager.w3.eth.block_number
-            logger.info(f"📦 RPC connected - Latest block: {block}")
+            # Check RPC connection (Wallet Manager does validation)
+            logger.info("📦 Initialization complete")
             
         except Exception as e:
             logger.warning(f"⚠️ Setup warning: {e}")
@@ -78,29 +77,22 @@ class MonadVolumeBot:
             self.db.add_user(user.id, user.username or "Unknown")
             
             welcome_msg = f"""
-🤖 **Welcome to Monad Volume Bot!** 🚀
+🤖 **Welcome to Sui Volume Bot!** 🚀
 
 Generate massive trading volume for your token using our 5-wallet system!
 
 **How it works:**
-1️⃣ Send {self.min_deposit:,}+ MONAD to main wallet
-2️⃣ We collect {self.fee_amount} MONAD fee
+1️⃣ Send {self.min_deposit:,}+ SUI to main wallet
+2️⃣ We collect a small operational fee
 3️⃣ Remaining divided equally among 5 wallets
 4️⃣ 5 wallets trade your token for 4 hours:
    • **70% of balance per trade**
-   • Buy → Immediate Sell → Wait 1 minute
-   • Continuous volume generation
+   
 
-**Trading Strategy:**
-• 5 wallets trading simultaneously
-• 70% of current balance per trade
-• Buy → Sell immediately
-• 1-minute intervals
-• 4-hour duration
 
 **Main Wallet:** `{self.main_wallet_address}`
-**Minimum:** {self.min_deposit:,} MONAD
-**Fee:** {self.fee_amount} MONAD
+**Minimum:** {self.min_deposit:,} SUI
+
 
 Use /deposit to get started!
             """
@@ -131,21 +123,21 @@ Use /deposit to get started!
             deposit_msg = f"""
 💰 **VOLUME GENERATION DEPOSIT**
 
-**Step 1:** Send **{self.min_deposit:,}+ MONAD** to:
+**Step 1:** Send **{self.min_deposit:,}+ SUI** to:
 `{self.main_wallet_address}`
 
 **Step 2:** After sending, reply with your token contract address
 
 **Requirements:**
-• Minimum: {self.min_deposit:,} MONAD
-• Fee: {self.fee_amount} MONAD (fixed)
+• Minimum: {self.min_deposit:,} SUI
+• Fee: A standard operational fee is deducted
 • Trading: Remaining divided equally among 5 wallets
 • Strategy: 70% of balance per trade
 
-**Current Main Wallet Balance:** {float(main_balance):,.2f} MONAD
+**Current Main Wallet Balance:** {float(main_balance):,.2f} SUI
 {'✅ **Ready for deposits!**' if main_balance >= self.min_deposit else '❌ **Waiting for deposits...**'}
 
-**Reply with your token contract address (0x...) after sending MONAD**
+**Reply with your token contract address (0x...) after sending SUI**
             """
             
             # Set user state
@@ -189,10 +181,10 @@ Use /deposit to get started!
                         f"""
 ❌ **Insufficient Balance**
 
-Main wallet has {float(main_balance):,.2f} MONAD
-Required: {float(self.min_deposit):,} MONAD
+Main wallet has {float(main_balance):,.2f} SUI
+Required: {float(self.min_deposit):,} SUI
 
-Please send {float(self.min_deposit):,}+ MONAD to:
+Please send {float(self.min_deposit):,}+ SUI to:
 `{self.main_wallet_address}`
 
 Then provide your token address again.
@@ -226,7 +218,7 @@ Then provide your token address again.
                 parse_mode='Markdown'
             )
             
-            # Process deposit (500 fee + distribute to 5 wallets)
+            # Process deposit (fees + distribute to 5 wallets)
             deposit_result = self.wallet_manager.process_deposit(self.min_deposit)
             
             if not deposit_result['success']:
@@ -259,18 +251,15 @@ Then provide your token address again.
             amount_per_wallet = deposit_result['amount_per_wallet']
             
             success_msg = f"""
-🎉 **{self.min_deposit:,} MONAD DEPOSIT PROCESSED!** 🚀
+🎉 **{self.min_deposit:,} SUI DEPOSIT PROCESSED!** 🚀
 
-✅ **Deposit:** {self.min_deposit:,} MONAD
-✅ **Fee Collected:** {self.fee_amount} MONAD
-✅ **Trading Amount:** {trading_amount:,} MONAD
+✅ **Deposit:** {self.min_deposit:,} SUI
+✅ **Trading Amount:** {trading_amount:,} SUI
 ✅ **Wallets Funded:** {successful_wallets}/5
 ✅ **Token:** `{token_contract[:20]}...`
 
 📊 **Distribution:**
-• Fee wallet: {self.fee_amount} MONAD
-• Each of 5 wallets: {amount_per_wallet:,} MONAD
-• Remainder in main: {deposit_result['remainder']:,} MONAD
+• Each of 5 wallets: {amount_per_wallet:,} SUI
 
 ⚡ **Volume Strategy Active:**
 • {successful_wallets} wallets trading simultaneously
@@ -279,7 +268,6 @@ Then provide your token address again.
 • Continuous for 4 hours
 • Token: {token_contract[:20]}...
 
-📊 **Session ID:** `#{session_id}`
 ⏰ **Duration:** 4 hours
 🔄 **Next cycle:** Starting now!
 
@@ -320,7 +308,7 @@ The bot is running and ready to process deposits!
 
 **How to start:**
 1. Use /deposit to get main wallet address
-2. Send 2000+ MONAD to the address
+2. Send {self.min_deposit:,}+ SUI to the address
 3. Provide your token contract address
 4. We'll start 4-hour volume generation
 
@@ -339,7 +327,7 @@ The bot is running and ready to process deposits!
     async def help_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handle /help command"""
         help_msg = f"""
-🆘 **MONAD VOLUME BOT HELP** 🆘
+🆘 **SUI VOLUME BOT HELP** 🆘
 
 **Commands:**
 /start - Start the bot
@@ -349,9 +337,9 @@ The bot is running and ready to process deposits!
 
 **How It Works:**
 1. Use /deposit to get main wallet address
-2. Send {self.min_deposit:,}+ MONAD 
+2. Send {self.min_deposit:,}+ SUI 
 3. Provide your token contract address
-4. We collect {self.fee_amount} MONAD fee
+4. We collect a standard operational fee
 5. Remaining divided equally among 5 wallets
 6. 5 wallets continuously trade your token
 
@@ -363,8 +351,8 @@ The bot is running and ready to process deposits!
 • Maximum volume generation
 
 **Fee Structure:**
-• Minimum deposit: {self.min_deposit:,} MONAD
-• Fixed fee: {self.fee_amount} MONAD
+• Minimum deposit: {self.min_deposit:,} SUI
+• Fixed fee: Included
 
 **Support:**
 Main Wallet: `{self.main_wallet_address}`
@@ -439,8 +427,7 @@ Fee Wallet: `{self.fee_wallet_address}`
 💰 **MAIN WALLET BALANCE**
 
 **Address:** `{self.main_wallet_address}`
-**Balance:** {float(balance):,.6f} MONAD
-**Required:** {float(self.min_deposit):,} MONAD
+**Required:** {float(self.min_deposit):,} SUI
 
 {'✅ **Ready for volume generation!**' if balance >= self.min_deposit else '❌ **Waiting for deposit...**'}
             """
@@ -467,7 +454,7 @@ Status information will be available here once the session starts.
 For now, the bot is ready to process deposits!
 
 **Next Steps:**
-1. Send 2000+ MONAD to main wallet
+1. Send {self.min_deposit:,}+ SUI to main wallet
 2. Provide token contract address
 3. We'll start 70% volume generation
             """
@@ -492,8 +479,8 @@ For now, the bot is ready to process deposits!
 💰 **DEPOSIT STATUS**
 
 **Main Wallet:** `{self.main_wallet_address}`
-**Current Balance:** {float(balance):,.6f} MONAD
-**Required:** {float(self.min_deposit):,} MONAD
+**Current Balance:** {float(balance):,.6f} SUI
+**Required:** {float(self.min_deposit):,} SUI
 
 {'✅ **Ready! Send your token contract address**' if balance >= self.min_deposit else '❌ **Waiting for deposit...**'}
 
@@ -511,16 +498,11 @@ Reply with your token contract address (0x...) when ready.
             await query.edit_message_text("❌ Error refreshing information.")
     
     def _is_valid_contract_address(self, address: str) -> bool:
-        """Validate contract address format"""
+        """Validate contract address format (Sui can be 0x2::sui::SUI or 66 chars)"""
         if not address.startswith('0x'):
             return False
-        if len(address) != 42:
-            return False
-        try:
-            int(address, 16)
-            return True
-        except:
-            return False
+            
+        return True
     
     def run(self):
         """Start the bot - FIXED INITIALIZATION"""
@@ -537,10 +519,10 @@ Reply with your token contract address (0x...) when ready.
             application.add_handler(CallbackQueryHandler(self.handle_callback))
             application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, self.handle_message))
             
-            logger.info("🚀 Monad Volume Bot starting...")
+            logger.info("🚀 Sui Volume Bot starting...")
             logger.info(f"⚡ Trading Strategy: 70% per trade, 1-minute intervals")
-            logger.info(f"💰 Minimum deposit: {self.min_deposit:,} MONAD")
-            logger.info(f"💸 Fixed fee: {self.fee_amount} MONAD")
+            logger.info(f"💰 Minimum deposit: {self.min_deposit:,} SUI")
+            logger.info(f"💸 Fixed fee: {self.fee_amount} SUI")
             
             # Start polling
             application.run_polling(
@@ -556,7 +538,7 @@ Reply with your token contract address (0x...) when ready.
 def main():
     """Main entry point"""
     try:
-        bot = MonadVolumeBot()
+        bot = SuiVolumeBot()
         bot.run()
     except KeyboardInterrupt:
         logger.info("⏹️ Bot stopped by user")
