@@ -14,6 +14,7 @@ from telegram.ext import (
     CallbackQueryHandler
 )
 from dotenv import load_dotenv
+import aiohttp
 
 from database import SuiDatabase
 from wallet_manager import WalletManager
@@ -193,11 +194,29 @@ Then provide your token address again.
                     )
                     return
                 
-                # Process deposit
-                await self._process_user_deposit(user_id, message_text, context)
+                # Instead of processing immediately, ask for trading mode
+                self.user_states[user_id]['data']['token_contract'] = message_text
                 
-                # Clear user state
-                self.user_states.pop(user_id, None)
+                mode_msg = f"""
+✅ **Token Accepted:** `{message_text[:15]}...`
+
+Please select the trading mode for this token:
+
+🔵 **Cetus Pool**
+For tokens that have already graduated and have liquidity on Cetus DEX.
+
+🟠 **Hop Pre-Bond**
+For new tokens still on the Hop Launchpad bonding curve. *(We will auto-fetch the curve ID)*
+                """
+                
+                keyboard = InlineKeyboardMarkup([
+                    [
+                        InlineKeyboardButton("🔵 Cetus Pool", callback_data="mode_cetus"),
+                        InlineKeyboardButton("🟠 Hop Pre-Bond", callback_data="mode_hop")
+                    ]
+                ])
+                
+                await update.message.reply_text(mode_msg, parse_mode='Markdown', reply_markup=keyboard)
                 
             else:
                 await update.message.reply_text(
@@ -208,20 +227,21 @@ Then provide your token address again.
             logger.error(f"❌ Message handling error: {e}")
             await update.message.reply_text("❌ Failed to process your message.")
     
-    async def _process_user_deposit(self, user_id: int, token_contract: str, context: ContextTypes.DEFAULT_TYPE):
+    async def _process_user_deposit(self, user_id: int, token_contract: str, context: ContextTypes.DEFAULT_TYPE, mode: str = 'cetus', curve_id: str = None):
         """Process user deposit and start volume generation"""
         try:
             # Send processing message
             processing_msg = await context.bot.send_message(
                 chat_id=user_id,
-                text="🔄 Processing your deposit... This may take a minute.",
+                text=f"🔄 Processing your deposit for {mode.upper()} mode... This may take a minute.",
                 parse_mode='Markdown'
             )
             
             # Create trading session in database FIRST to get the ID
             trading_amount = Decimal(str(self.min_deposit - self.fee_amount))
             session_id = self.db.create_trading_session(
-                user_id, token_contract, float(self.min_deposit), float(trading_amount)
+                user_id, token_contract, float(self.min_deposit), float(trading_amount),
+                mode=mode, curve_id=curve_id
             )
             
             # Process deposit (fees + distribute to 5 SESSION SPECIFIC wallets)
@@ -236,7 +256,8 @@ Then provide your token address again.
             
             # Start 4-hour volume generation
             success = await self.volume_engine.start_volume_session(
-                session_id, token_contract, self.min_deposit
+                session_id, token_contract, self.min_deposit,
+                mode=mode, curve_id=curve_id
             )
             
             if not success:
@@ -256,6 +277,7 @@ Then provide your token address again.
 ✅ **Deposit:** {self.min_deposit:,} SUI
 ✅ **Trading Amount:** {trading_amount:,} SUI
 ✅ **Wallets Funded:** {successful_wallets}/5
+✅ **Trading Mode:** {mode.upper()}
 ✅ **Token:** `{token_contract[:20]}...`
 
 📊 **Distribution:**
@@ -391,6 +413,8 @@ Fee Wallet: `{self.fee_wallet_address}`
                 await self.status_command(mock_update, context)
             elif data == "check_balance":
                 await self._send_balance_check(query)
+            elif data.startswith("mode_"):
+                await self._handle_mode_selection(query, context, data)
             elif data.startswith("status_"):
                 session_id = int(data.split("_")[1])
                 await self._send_session_status(query, session_id)
@@ -442,6 +466,61 @@ Fee Wallet: `{self.fee_wallet_address}`
         except Exception as e:
             logger.error(f"❌ Balance check error: {e}")
             await query.edit_message_text("❌ Error checking balance.")
+
+    async def _handle_mode_selection(self, query, context, data: str):
+        """Handle selection of Cetus vs Hop mode"""
+        user_id = query.from_user.id
+        user_state = self.user_states.get(user_id)
+        
+        if not user_state or 'token_contract' not in user_state.get('data', {}):
+            await query.edit_message_text("❌ Session expired. Please /deposit again.")
+            return
+            
+        token_contract = user_state['data']['token_contract']
+        mode = 'cetus' if data == 'mode_cetus' else 'hop_prebond'
+        curve_id = None
+        
+        await query.edit_message_text(f"🔄 Preparing {mode.upper()} mode for `{token_contract[:15]}...`", parse_mode='Markdown')
+        
+        # If Hop mode, we must fetch the curve ID
+        if mode == 'hop_prebond':
+            try:
+                # hop API expects the ticker or exact type, their API often uses the full type or ticker
+                # We will try to fetch from their public coin API by extracting the ticker 
+                # e.g. 0x...::hopdog::HOPDOG -> HOPDOG
+                ticker = token_contract.split('::')[-1]
+                
+                async with aiohttp.ClientSession() as session:
+                    # using the same URL the frontend uses
+                    async with session.get(f'https://ws.hop.ag/api/coin/{ticker}') as resp:
+                        if resp.status == 200:
+                            coin_data = await resp.json()
+                            curve_id = coin_data.get('curve_id')
+                            
+                if not curve_id:
+                    # if ticker fetch failed, try giving them an explicit error to retry
+                    await query.edit_message_text(
+                        "❌ Could not auto-fetch the curve ID from Hop API.\n"
+                        "Please ensure the token contract is correct (e.g. `0xABCD::ticker::TICKER`) "
+                        "and that it exists on hop.fun.\n\nUse /deposit to try again."
+                    )
+                    self.user_states.pop(user_id, None)
+                    return
+                    
+            except Exception as e:
+                logger.error(f"Hop API fetch error: {e}")
+                await query.edit_message_text("❌ Error connecting to Hop API. Please try again.")
+                self.user_states.pop(user_id, None)
+                return
+
+        # Proceed to start deposit
+        # Create a mock update to pass to process
+        mock_update = Update(update_id=query.update.update_id, message=query.message, callback_query=query)
+        await self._process_user_deposit(user_id, token_contract, context, mode=mode, curve_id=curve_id)
+        
+        # Clear the state at the end
+        self.user_states.pop(user_id, None)
+    
     
     async def _send_session_status(self, query, session_id: int):
         """Send session status"""

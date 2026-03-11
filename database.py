@@ -56,11 +56,23 @@ class SuiDatabase:
                 status TEXT DEFAULT 'active',
                 total_trades INTEGER DEFAULT 0,
                 total_volume REAL DEFAULT 0,
+                mode TEXT DEFAULT 'cetus',
+                curve_id TEXT,
                 completed_at TIMESTAMP,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (user_id) REFERENCES users (user_id)
             )
         ''')
+
+        # Migrate existing DBs: add mode/curve_id if missing
+        try:
+            cursor.execute('ALTER TABLE trading_sessions ADD COLUMN mode TEXT DEFAULT \'cetus\'')
+        except Exception:
+            pass
+        try:
+            cursor.execute('ALTER TABLE trading_sessions ADD COLUMN curve_id TEXT')
+        except Exception:
+            pass
         
         # Session isolated dynamic wallets
         cursor.execute('''
@@ -214,22 +226,22 @@ class SuiDatabase:
         conn.commit()
         conn.close()
 
-    def create_trading_session(self, user_id, token_contract, original_amount, trading_amount):
+    def create_trading_session(self, user_id, token_contract, original_amount, trading_amount, mode='cetus', curve_id=None):
         """Start a new trading session for user"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
         cursor.execute('''
             INSERT INTO trading_sessions 
-            (user_id, token_contract, original_amount, trading_amount, current_balance)
-            VALUES (?, ?, ?, ?, ?)
-        ''', (user_id, token_contract, original_amount, trading_amount, trading_amount))
+            (user_id, token_contract, original_amount, trading_amount, current_balance, mode, curve_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (user_id, token_contract, original_amount, trading_amount, trading_amount, mode, curve_id))
         
         session_id = cursor.lastrowid
         conn.commit()
         conn.close()
         
-        logger.info(f"🆕 Trading session {session_id} for user {user_id}, token {token_contract[:20]}...")
+        logger.info(f"🆕 Trading session {session_id} [{mode}] for user {user_id}, token {token_contract[:20]}...")
         return session_id
 
     def store_session_wallets(self, session_id: int, wallets: list):

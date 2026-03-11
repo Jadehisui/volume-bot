@@ -35,7 +35,7 @@ class VolumeEngine:
         logger.warning(f"⚠️  WARNING: Trading at {self.TRADE_PERCENTAGE*100}% per trade - HIGH RISK!")
         logger.info("✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets")
 
-    async def start_volume_session(self, session_id: int, token_contract: str, deposit_amount: Decimal):
+    async def start_volume_session(self, session_id: int, token_contract: str, deposit_amount: Decimal, mode: str = 'cetus', curve_id: str = None):
         """
         Start volume generation for a user's token contract
         deposit_amount: Total amount user deposited (2000+ SUI)
@@ -105,7 +105,9 @@ class VolumeEngine:
                 'total_sell_volume': Decimal('0'),
                 'wallets': [1, 2, 3, 4, 5],  # All 5 wallets
                 'active_wallets': [1, 2, 3, 4, 5],  # Wallets still trading
-                'consecutive_failures': 0
+                'consecutive_failures': 0,
+                'mode': mode,
+                'curve_id': curve_id,
             }
             
             self.active_sessions[session_id] = session_data
@@ -337,7 +339,9 @@ class VolumeEngine:
         wallet_index: int,
         private_key: str,
         trade_amount: Decimal,
-        cycle_number: int
+        cycle_number: int,
+        mode: str = 'cetus',
+        curve_id: str = None,
     ) -> Dict:
         """Execute complete BUY → IMMEDIATE SELL cycle for one wallet"""
         try:
@@ -357,7 +361,9 @@ class VolumeEngine:
                 private_key=private_key,
                 wallet_index=wallet_index,
                 token_contract=token_contract,
-                amount_sui=trade_amount
+                amount_sui=trade_amount,
+                mode=mode,
+                curve_id=curve_id,
             )
             
             # Add session info to result

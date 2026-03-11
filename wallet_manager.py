@@ -30,9 +30,8 @@ class WalletManager:
             logger.error(f"❌ Failed to initialize Sui client: {e}")
             raise
         
-        # Load wallets
+        # Load main wallet
         self.main_wallet = self._load_main_wallet()
-        self.sub_wallets = self._load_sub_wallets()
         self.fee_wallet = os.getenv('FEE_WALLET_ADDRESS', '0x279fedb1e3e5afc9cde877bf7723ebc4fb1c5bf085fcbcc3d6fd80cda07b0ccb')
         
         # Configuration matches implementation plan amounts
@@ -41,7 +40,6 @@ class WalletManager:
         
         logger.info(f"💰 Main wallet: {self.main_wallet['address']}")
         logger.info(f"💸 Fee wallet: {self.fee_wallet}")
-        logger.info(f"📱 {len(self.sub_wallets)} sub-wallets loaded")
     
     def _get_address_from_key(self, private_key: str) -> str:
         """Use the JS script to securely extract the address from the suiprivkey"""
@@ -73,29 +71,7 @@ class WalletManager:
             logger.error(f"❌ Invalid MAIN_WALLET_PRIVATE_KEY: {e}")
             raise
     
-    def _load_sub_wallets(self) -> List[Dict]:
-        """Load all 5 sub-wallets"""
-        sub_wallets = []
-        for i in range(1, 6):
-            env_var = f'SUB_WALLET_{i}_PRIVATE_KEY'
-            private_key = os.getenv(env_var, '').strip()
-            
-            if not private_key:
-                raise ValueError(f"{env_var} is required")
-            
-            try:
-                address = self._get_address_from_key(private_key)
-                sub_wallets.append({'index': i, 'address': address, 'private_key': private_key})
-                logger.info(f"✅ Sub-wallet {i} loaded: {address}")
-            except Exception as e:
-                logger.error(f"❌ Invalid {env_var}: {e}")
-                raise
-        return sub_wallets
-    
-    def get_sub_wallet(self, index: int) -> Optional[Dict]:
-        if 1 <= index <= len(self.sub_wallets):
-            return self.sub_wallets[index - 1]
-        return None
+
     
     def get_wallet_balance(self, address: str) -> Decimal:
         """Get SUI balance for a wallet using pysui"""
@@ -285,18 +261,8 @@ class WalletManager:
                 'fee_wallet': {
                     'address': self.fee_wallet,
                     'balance': float(self.get_wallet_balance(self.fee_wallet))
-                },
-                'sub_wallets': []
+                }
             }
-            
-            for wallet in self.sub_wallets:
-                balance = self.get_wallet_balance(wallet['address'])
-                balances['sub_wallets'].append({
-                    'index': wallet['index'],
-                    'address': wallet['address'],
-                    'balance': float(balance)
-                })
-            
             return balances
         except Exception as e:
             logger.error(f"❌ Error getting balances: {e}")
@@ -315,14 +281,6 @@ class WalletManager:
                 logger.info(f"💸 Fee wallet: {fee_balance:.6f} SUI")
             else:
                 issues.append("Fee wallet address not set")
-            
-            for i in range(1, 6):
-                wallet = self.get_sub_wallet(i)
-                if wallet:
-                    balance = self.get_wallet_balance(wallet['address'])
-                    logger.info(f"📱 Wallet {i}: {balance:.6f} SUI")
-                else:
-                    issues.append(f"Wallet {i} not loaded")
                     
             if issues:
                 return False, issues

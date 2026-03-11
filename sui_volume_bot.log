@@ -2455,3 +2455,102 @@ RuntimeError: ExtBot is not properly initialized. Call `ExtBot.initialize` befor
 2026-03-07 16:42:21,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
 2026-03-07 16:42:31,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
 2026-03-07 16:42:42,057 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:42:52,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:02,438 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:12,728 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:23,069 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:33,248 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:43,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:43:53,617 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:03,805 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:13,975 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:24,207 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:34,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:44,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:44:55,024 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-07 16:45:05,200 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8607675988:AAHEm-TaYYy03SsZqq26brWBo4FYAHzE8qM/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:03:21,478 - database - INFO - ✅ Database initialized successfully
+2026-03-11 18:03:27,193 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:03:28,355 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:03:28,591 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:03:28,760 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-11 18:03:29,552 - wallet_manager - INFO - ✅ Main wallet loaded: 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036
+2026-03-11 18:03:29,553 - __main__ - ERROR - ❌ Failed to start bot: SUB_WALLET_1_PRIVATE_KEY is required
+Traceback (most recent call last):
+  File "/home/carnage/Documents/volume bot /bot.py", line 631, in main
+    bot = SuiVolumeBot()
+  File "/home/carnage/Documents/volume bot /bot.py", line 49, in __init__
+    self.wallet_manager = WalletManager(database=self.db)
+                          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/carnage/Documents/volume bot /wallet_manager.py", line 35, in __init__
+    self.sub_wallets = self._load_sub_wallets()
+                       ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/carnage/Documents/volume bot /wallet_manager.py", line 84, in _load_sub_wallets
+    raise ValueError(f"{env_var} is required")
+ValueError: SUB_WALLET_1_PRIVATE_KEY is required
+2026-03-11 18:04:09,507 - database - INFO - ✅ Database initialized successfully
+2026-03-11 18:04:11,215 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:04:13,357 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:04:13,739 - httpx - INFO - HTTP Request: POST https://fullnode.mainnet.sui.io "HTTP/2 200 OK"
+2026-03-11 18:04:15,655 - wallet_manager - INFO - ✅ Connected to Sui Node at https://fullnode.mainnet.sui.io:443
+2026-03-11 18:04:16,401 - wallet_manager - INFO - ✅ Main wallet loaded: 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036
+2026-03-11 18:04:16,401 - wallet_manager - INFO - 💰 Main wallet: 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036
+2026-03-11 18:04:16,401 - wallet_manager - INFO - 💸 Fee wallet: 0xc754deda16258a84918641ff103f029ecf5203d94445255194387d96cedebf35
+2026-03-11 18:04:16,401 - volume_engine - WARNING - ⚠️  WARNING: Trading at 70.00% per trade - HIGH RISK!
+2026-03-11 18:04:16,401 - volume_engine - INFO - ✅ Volume Engine initialized - Handles BUY→SELL on all 5 wallets
+2026-03-11 18:04:16,401 - __main__ - INFO - ✅ Sui Volume Bot initialized
+2026-03-11 18:04:16,401 - __main__ - INFO - 💰 Main wallet: 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036
+2026-03-11 18:04:16,401 - __main__ - INFO - 💸 Fee wallet: 0xc754deda16258a84918641ff103f029ecf5203d94445255194387d96cedebf35
+2026-03-11 18:04:16,402 - database - INFO - ✅ Database initialized successfully
+2026-03-11 18:04:16,402 - __main__ - INFO - ✅ Database initialized
+2026-03-11 18:04:16,402 - __main__ - INFO - 📦 Initialization complete
+2026-03-11 18:04:16,429 - __main__ - INFO - 🚀 Sui Volume Bot starting...
+2026-03-11 18:04:16,429 - __main__ - INFO - ⚡ Trading Strategy: 70% per trade, 1-minute intervals
+2026-03-11 18:04:16,429 - __main__ - INFO - 💰 Minimum deposit: 20 SUI
+2026-03-11 18:04:16,429 - __main__ - INFO - 💸 Fixed fee: 2 SUI
+2026-03-11 18:04:20,300 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getMe "HTTP/1.1 200 OK"
+2026-03-11 18:04:20,504 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/deleteWebhook "HTTP/1.1 200 OK"
+2026-03-11 18:04:20,508 - telegram.ext.Application - INFO - Application started
+2026-03-11 18:04:31,217 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:04:42,011 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:04:52,399 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:04:57,627 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:04:58,696 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/sendMessage "HTTP/1.1 200 OK"
+2026-03-11 18:05:07,846 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:18,065 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:18,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:19,809 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-11 18:05:19,811 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036: 'SuiNullType' object has no attribute 'owner'
+2026-03-11 18:05:20,115 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/sendMessage "HTTP/1.1 200 OK"
+2026-03-11 18:05:29,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:36,902 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:37,675 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-03-11 18:05:37,679 - wallet_manager - ERROR - ❌ Error getting SUI balance for 0x89da7b034e90ce636ed66918f03dd090f358842847fda77a3b7aaf269c197036: cannot access local variable 'result' where it is not associated with a value
+2026-03-11 18:05:37,991 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/sendMessage "HTTP/1.1 200 OK"
+2026-03-11 18:05:47,196 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:05:57,584 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:06:07,848 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:06:18,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:06:29,920 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:06:40,253 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:06:50,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:00,789 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:11,034 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:21,550 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:31,784 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:42,000 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:07:52,209 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:02,428 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:12,637 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:22,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:33,029 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:43,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:08:53,422 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:03,629 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:13,830 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:24,021 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:34,229 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:44,455 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:09:54,665 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:10:04,868 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
+2026-03-11 18:10:15,090 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8623617763:AAGEt82refFDrRA-HThFhtA0ad5gMCVbR8I/getUpdates "HTTP/1.1 200 OK"
