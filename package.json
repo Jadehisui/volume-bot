@@ -1,0 +1,24 @@
+{
+    "name": "monad-suit-bridge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@cetusprotocol/aggregator-sdk": "^1.4.5",
+        "@cetusprotocol/cetus-sui-clmm-sdk": "^5.4.0",
+        "@mysten/sui": "^1.13.0",
+        "bip39": "^3.1.0",
+        "bn.js": "^5.2.3",
+        "decimal.js": "^10.6.0",
+        "fs-extra": "^11.3.4"
+    },
+    "devDependencies": {
+        "@types/node": "^25.3.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    }
+}
