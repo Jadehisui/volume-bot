@@ -45,19 +45,29 @@ class WalletManager:
     
     def _get_address_from_key(self, private_key: str) -> str:
         """Use the JS script to securely extract the address from the suiprivkey"""
-        result = subprocess.run(
-            ['node', 'getKeyInfo.js', private_key],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        if result.returncode != 0:
-            raise ValueError(f"Failed to extract address: {result.stderr.strip()}")
+        try:
+            result = subprocess.run(
+                ['node', 'getKeyInfo.js', private_key],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
             
-        data = json.loads(result.stdout.strip())
-        if 'error' in data:
-            raise ValueError(f"Key error: {data['error']}")
-        return data['address']
+            if result.returncode != 0:
+                err_msg = result.stderr.strip() or result.stdout.strip()
+                logger.error(f"❌ address extraction failed (Code {result.returncode}): {err_msg}")
+                raise ValueError(f"Address extraction failed. Ensure 'node' is installed and 'npm install' was run. Error: {err_msg}")
+                
+            data = json.loads(result.stdout.strip())
+            if 'error' in data:
+                raise ValueError(f"Key error: {data['error']}")
+            return data['address']
+        except FileNotFoundError:
+            logger.error("❌ 'node' command not found. Please install Node.js on your VPS.")
+            raise ValueError("Node.js is not installed. Please run: sudo apt install nodejs npm")
+        except Exception as e:
+            logger.error(f"❌ Error in _get_address_from_key: {e}")
+            raise
 
     def _load_main_wallet(self) -> Dict:
         """Load main wallet"""
