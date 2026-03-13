@@ -53,15 +53,25 @@ class WalletManager:
                 text=True
             )
             
+            # Try to parse stdout first - sometimes Node exits with a signal even after printing
+            stdout_clean = result.stdout.strip()
+            if stdout_clean:
+                try:
+                    data = json.loads(stdout_clean)
+                    if 'address' in data:
+                        return data['address']
+                    if 'error' in data:
+                        raise ValueError(f"Key error: {data['error']}")
+                except json.JSONDecodeError:
+                    pass # Not valid JSON, continue to error check
+
             if result.returncode != 0:
-                err_msg = result.stderr.strip() or result.stdout.strip()
+                err_msg = result.stderr.strip() or stdout_clean
                 logger.error(f"❌ address extraction failed (Code {result.returncode}): {err_msg}")
-                raise ValueError(f"Address extraction failed. Ensure 'node' is installed and 'npm install' was run. Error: {err_msg}")
-                
-            data = json.loads(result.stdout.strip())
-            if 'error' in data:
-                raise ValueError(f"Key error: {data['error']}")
-            return data['address']
+                raise ValueError(f"Address extraction failed. Error: {err_msg}")
+            
+            raise ValueError("No address returned from script")
+            
         except FileNotFoundError:
             logger.error("❌ 'node' command not found. Please install Node.js on your VPS.")
             raise ValueError("Node.js is not installed. Please run: sudo apt install nodejs npm")
