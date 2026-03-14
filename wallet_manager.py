@@ -119,16 +119,21 @@ class WalletManager:
     
     def get_wallet_balance(self, address: str) -> Decimal:
         """Get SUI balance for a wallet using pysui"""
+        from pysui.sui.sui_builders.get_builders import GetCoinTypeBalance
         try:
-            # Query the balance
-            res_data = self.client.get_balance(SuiAddress(address))
+            # Query the balance using the correct builder for this pysui version
+            builder = GetCoinTypeBalance(owner=SuiAddress(address))
+            res_data = self.client.execute(builder)
+            
             if res_data.is_ok():
                 balance_mist = res_data.result_data.total_balance
                 balance_sui = Decimal(balance_mist) / Decimal('1000000000')
                 return balance_sui
-            return Decimal('0')
+            else:
+                logger.error(f"❌ RPC Error getting balance for {address}: {res_data.result_data}")
+                return Decimal('0')
         except Exception as e:
-            logger.error(f"❌ Error getting SUI balance for {address}: {e}")
+            logger.error(f"❌ Exception getting SUI balance for {address}: {e}")
             return Decimal('0')
 
     async def wait_for_deposit(self, address: str, min_balance: Decimal, timeout_mins: int = 10) -> Tuple[bool, Decimal]:
