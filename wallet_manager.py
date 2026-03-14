@@ -37,7 +37,7 @@ class WalletManager:
         
         # Configuration matches implementation plan amounts
         self.MIN_DEPOSIT = Decimal('20')  # 20 SUI
-        self.FEE_AMOUNT = Decimal('5')    # 5 SUI
+        self.FEE_AMOUNT = Decimal('2')    # 2 SUI fee
         
         logger.info(f"💰 Main wallet: {self.main_wallet['address']}")
         logger.info(f"💸 Fee wallet: {self.fee_wallet}")
@@ -121,19 +121,35 @@ class WalletManager:
         """Get SUI balance for a wallet using pysui"""
         try:
             # Query the balance
-            result = self.client.get_coin(SuiAddress(address))
-            if result.is_ok():
-                # sum up balances from coin items if multiple or use totalBalance if accessible
-                # depending on pysui version get_coin might return multiple coins, but the quickest way is:
-                res_data = self.client.get_balance(SuiAddress(address))
-                if res_data.is_ok():
-                    balance_mist = res_data.result_data.total_balance
-                    balance_sui = Decimal(balance_mist) / Decimal('1000000000')
-                    return balance_sui
+            res_data = self.client.get_balance(SuiAddress(address))
+            if res_data.is_ok():
+                balance_mist = res_data.result_data.total_balance
+                balance_sui = Decimal(balance_mist) / Decimal('1000000000')
+                return balance_sui
             return Decimal('0')
         except Exception as e:
             logger.error(f"❌ Error getting SUI balance for {address}: {e}")
             return Decimal('0')
+
+    async def wait_for_deposit(self, address: str, min_balance: Decimal, timeout_mins: int = 10) -> Tuple[bool, Decimal]:
+        """Wait for a deposit to arrive at the address"""
+        import time
+        start_time = time.time()
+        timeout_secs = timeout_mins * 60
+        
+        logger.info(f"⏳ Waiting for {min_balance} SUI at {address}...")
+        
+        while (time.time() - start_time) < timeout_secs:
+            current_balance = self.get_wallet_balance(address)
+            if current_balance >= min_balance:
+                logger.info(f"✅ Deposit detected! Balance: {current_balance} SUI")
+                return True, current_balance
+            
+            # Wait 15 seconds before next check
+            await asyncio.sleep(15)
+            
+        logger.warning(f"⏰ Timeout reached waiting for deposit at {address}")
+        return False, self.get_wallet_balance(address)
     
     def generate_session_wallets(self, session_id: int, count: int = 5) -> list:
         """Dynamically generate N unique sub-wallets via JS bridge and store them in DB"""
@@ -159,7 +175,24 @@ class WalletManager:
             if data.get('success'):
                 wallets = data.get('wallets', [])
                 self.db.store_session_wallets(session_id, wallets)
+                
+                # Securely log keys to logs/wallets.txt for tracing
+                try:
+                    import datetime
+                    os.makedirs('logs', exist_ok=True)
+                    with open('logs/wallets.txt', 'a') as f:
+                        now = datetime.datetime.now().isoformat()
+                        f.write(f"--- SESSION {session_id} - {now} ---\n")
+                        for w in wallets:
+                            f.write(f"Wallet {w['index']}: {w['address']}\n")
+                            f.write(f"Private Key: {w['private_key']}\n")
+                            f.write(f"Mnemonic: {w['mnemonic']}\n\n")
+                    logger.info(f"📝 Logged {len(wallets)} wallet keys to logs/wallets.txt")
+                except Exception as log_e:
+                    logger.error(f"❌ Failed to log wallet keys: {log_e}")
+
                 return wallets
+                
             else:
                 logger.error(f"❌ JS Generator failed: {data.get('error')}")
                 return []

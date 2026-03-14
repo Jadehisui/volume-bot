@@ -49,8 +49,8 @@ class VolumeEngine:
             
             user_id = session[1]
             
-            # Calculate trading amount (deposit - 500 fee)
-            fee_amount = Decimal('500')
+            # Calculate trading amount 
+            fee_amount = self.wm.FEE_AMOUNT
             trading_amount = deposit_amount - fee_amount
             
             # Calculate amount per wallet (divide by 5, remainder stays)

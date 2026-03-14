@@ -82,7 +82,7 @@ class SuiVolumeBot:
 Generate massive trading volume for your token using our 5-wallet system!
 
 **How it works:**
-1️⃣ Send {self.min_deposit:,}+ SUI to main wallet
+1️⃣ Send **{self.min_deposit:,}+ SUI** to main wallet
 2️⃣ We collect a small operational fee
 3️⃣ Remaining divided equally among 5 wallets
 4️⃣ 5 wallets trade your token for 4 hours:
@@ -218,14 +218,26 @@ Then provide your token address again.
                 parse_mode='Markdown'
             )
             
+            # Wait for deposit to hit RPC
+            deposit_detected, current_balance = await self.wallet_manager.wait_for_deposit(
+                self.main_wallet_address, self.min_deposit
+            )
+            
+            if not deposit_detected:
+                await processing_msg.edit_text(
+                    f"❌ **Deposit not detected yet.**\n\nPlease ensure you sent {float(self.min_deposit):,} SUI to:\n`{self.main_wallet_address}`\n\nBalance: {float(current_balance):,.2f} SUI",
+                    parse_mode='Markdown'
+                )
+                return
+
             # Create trading session in database FIRST to get the ID
-            trading_amount = Decimal(str(self.min_deposit - self.fee_amount))
+            trading_amount = current_balance - self.wallet_manager.FEE_AMOUNT
             session_id = self.db.create_trading_session(
-                user_id, token_contract, float(self.min_deposit), float(trading_amount)
+                user_id, token_contract, float(current_balance), float(trading_amount)
             )
             
             # Process deposit (fees + distribute to 5 SESSION SPECIFIC wallets)
-            deposit_result = self.wallet_manager.process_deposit(self.min_deposit, session_id)
+            deposit_result = self.wallet_manager.process_deposit(current_balance, session_id)
             
             if not deposit_result['success']:
                 await processing_msg.edit_text(
@@ -236,7 +248,7 @@ Then provide your token address again.
             
             # Start 4-hour volume generation
             success = await self.volume_engine.start_volume_session(
-                session_id, token_contract, self.min_deposit
+                session_id, token_contract, current_balance
             )
             
             if not success:
@@ -251,10 +263,10 @@ Then provide your token address again.
             amount_per_wallet = deposit_result['amount_per_wallet']
             
             success_msg = f"""
-🎉 **{self.min_deposit:,} SUI DEPOSIT PROCESSED!** 🚀
+🎉 **VOLUME GENERATION INITIATED!** 🚀
 
-✅ **Deposit:** {self.min_deposit:,} SUI
-✅ **Trading Amount:** {trading_amount:,} SUI
+✅ **Deposit Detected:** {float(current_balance):,.2f} SUI
+✅ **Trading Amount:** {float(trading_amount):,.2f} SUI
 ✅ **Wallets Funded:** {successful_wallets}/5
 ✅ **Token:** `{token_contract[:20]}...`
 
