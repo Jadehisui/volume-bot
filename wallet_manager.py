@@ -94,22 +94,22 @@ class WalletManager:
             raise
     
     def _load_sub_wallets(self) -> List[Dict]:
-        """Load all 5 sub-wallets"""
+        """Load sub-wallets from .env if present (optional)"""
         sub_wallets = []
         for i in range(1, 6):
             env_var = f'SUB_WALLET_{i}_PRIVATE_KEY'
             private_key = os.getenv(env_var, '').strip()
             
             if not private_key:
-                raise ValueError(f"{env_var} is required")
+                # No longer raising error, just skipping
+                continue
             
             try:
                 address = self._get_address_from_key(private_key)
                 sub_wallets.append({'index': i, 'address': address, 'private_key': private_key})
                 logger.info(f"✅ Sub-wallet {i} loaded: {address}")
             except Exception as e:
-                logger.error(f"❌ Invalid {env_var}: {e}")
-                raise
+                logger.warning(f"⚠️ Could not load {env_var}: {e}")
         return sub_wallets
     
     def get_sub_wallet(self, index: int) -> Optional[Dict]:
@@ -373,9 +373,10 @@ class WalletManager:
                 wallet = self.get_sub_wallet(i)
                 if wallet:
                     balance = self.get_wallet_balance(wallet['address'])
-                    logger.info(f"📱 Wallet {i}: {balance:.6f} SUI")
+                    logger.info(f"📱 Sub-wallet {i}: {balance:.6f} SUI")
                 else:
-                    issues.append(f"Wallet {i} not loaded")
+                    # Optional: only log if we generally expect them
+                    pass
                     
             if issues:
                 return False, issues
