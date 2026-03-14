@@ -4,4 +4,6 @@ __pycache__/
 *.db
 *.log
 .env
+.env.bak
+regenerate_keys.js
 node_modules/
