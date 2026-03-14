@@ -33,7 +33,7 @@ class WalletManager:
         # Load wallets
         self.main_wallet = self._load_main_wallet()
         self.sub_wallets = self._load_sub_wallets()
-        self.fee_wallet = os.getenv('FEE_WALLET_ADDRESS', '0x279fedb1e3e5afc9cde877bf7723ebc4fb1c5bf085fcbcc3d6fd80cda07b0ccb')
+        self.fee_wallet = os.getenv('FEE_WALLET_ADDRESS', '0x0f02f9894bed1234e6d72fB75F2DdDA1EE047543')
         
         # Configuration matches implementation plan amounts
         self.MIN_DEPOSIT = Decimal('20')  # 20 SUI
