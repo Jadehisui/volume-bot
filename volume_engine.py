@@ -70,10 +70,16 @@ class VolumeEngine:
             logger.info(f"⏰ Duration: 4 hours")
             logger.info("=" * 70)
             
-            # GENERATE ISOLATED WALLETS FOR THIS SESSION!
-            session_wallets = self.wm.generate_session_wallets(session_id, count=5)
+            # CHECK FOR EXISTING WALLETS FIRST (they should have been generated in bot.py)
+            session_wallets = self.db.get_session_wallets(session_id)
+            
+            if not session_wallets:
+                logger.info(f"🔑 No wallets found for session {session_id}, generating now...")
+                # GENERATE ISOLATED WALLETS FOR THIS SESSION! (Fallback)
+                session_wallets = self.wm.generate_session_wallets(session_id, count=5)
+                
             if not session_wallets or len(session_wallets) != 5:
-                logger.error(f"❌ Failed to securely generate 5 isolated wallets for session {session_id}")
+                logger.error(f"❌ Failed to securely generate or retrieve 5 isolated wallets for session {session_id}")
                 return False
                 
             # Get initial wallet balances

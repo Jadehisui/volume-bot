@@ -236,6 +236,16 @@ Then provide your token address again.
                 user_id, token_contract, float(current_balance), float(trading_amount)
             )
             
+            # NEW: Generate isolated wallets for this session BEFORE processing deposit
+            # This is critical because process_deposit needs these wallets to distribute funds!
+            session_wallets = self.wallet_manager.generate_session_wallets(session_id, count=5)
+            if not session_wallets or len(session_wallets) != 5:
+                await processing_msg.edit_text(
+                    "❌ Failed to generate trading wallets. Please try again or contact support.",
+                    parse_mode='Markdown'
+                )
+                return
+            
             # Process deposit (fees + distribute to 5 SESSION SPECIFIC wallets)
             deposit_result = self.wallet_manager.process_deposit(current_balance, session_id)
             

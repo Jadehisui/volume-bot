@@ -226,6 +226,11 @@ class WalletManager:
             logger.info(f"📊 Trading amount: {remaining_after_fee} SUI")
             logger.info(f"📤 Per wallet: {amount_per_wallet} SUI")
             
+            # Fetch isolated wallets from our database!
+            session_wallets = self.db.get_session_wallets(session_id)
+            if not session_wallets or len(session_wallets) == 0:
+                 return {'success': False, 'error': f'No dynamically generated unique wallets found for session {session_id}! Wallets must be generated before deposit processing.'}
+
             # Send fee
             fee_result = self._transfer_sui_safe(
                 from_wallet=self.main_wallet,
@@ -236,15 +241,9 @@ class WalletManager:
             
             if not fee_result['success']:
                 return {'success': False, 'error': f'Fee failed: {fee_result.get("error")}'}
-            
-            # Send to all 5 SESSION specific wallets
+
             distribution_results = []
             successful_wallets = 0
-            
-            # Fetch isolated wallets from our database!
-            session_wallets = self.db.get_session_wallets(session_id)
-            if not session_wallets or len(session_wallets) == 0:
-                 return {'success': False, 'error': f'No dynamically generated unique wallets found for session {session_id}!'}
 
             for wallet in session_wallets:
                 if amount_per_wallet > Decimal('0.001'):
