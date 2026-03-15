@@ -211,11 +211,15 @@ Then provide your token address again.
                     )
                     return
                 
-                # Show token confirmation instead of processing immediately
+                # Store pending CA and show confirmation
+                if user_id not in self.user_states:
+                    self.user_states[user_id] = {}
+                self.user_states[user_id]['pending_ca'] = message_text
+                
                 await self._show_token_confirmation(update, context, message_text)
                 
-                # Clear user state
-                self.user_states.pop(user_id, None)
+                # Note: We NO LONGER pop user_state here as we need 'pending_ca' 
+                # for the confirmation callback.
                 
             else:
                 await update.message.reply_text(
@@ -455,9 +459,15 @@ Fee Wallet: `{self.fee_wallet_address}`
                     callback_query=query
                 )
                 await self.help_command(mock_update, context)
-            elif data.startswith("confirm_start_"):
-                # Format: confirm_start_tokenContract
-                token_contract = data.split("_", 2)[2]
+            elif data == "confirm_start":
+                # Retrieve CA from state
+                user_state = self.user_states.get(query.from_user.id, {})
+                token_contract = user_state.get('pending_ca')
+                
+                if not token_contract:
+                    await query.edit_message_text("❌ **Error:** Token contract not found in session. Please paste the address again.")
+                    return
+                
                 await query.edit_message_text(f"✅ **Confirmed!** Starting session for `{token_contract[:10]}...`")
                 await self._process_user_deposit(query.from_user.id, token_contract, context)
             elif data == "cancel_start":
@@ -603,7 +613,7 @@ Reply with your token contract address (0x...) when ready.
 ✅ **Everything is ready!** Click the button below to start the 4-hour volume generation.
 """
                 keyboard = InlineKeyboardMarkup([
-                    [InlineKeyboardButton("🚀 Start Volume Now", callback_data=f"confirm_start_{token_contract}")],
+                    [InlineKeyboardButton("🚀 Start Volume Now", callback_data="confirm_start")],
                     [InlineKeyboardButton("❌ Cancel", callback_data="cancel_start")]
                 ])
             else:
