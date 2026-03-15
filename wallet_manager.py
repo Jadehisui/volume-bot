@@ -152,7 +152,10 @@ class WalletManager:
                 
             data = json.loads(result.stdout.strip())
             if data.get('success'):
-                return data.get('metadata')
+                return {
+                    'metadata': data.get('metadata'),
+                    'resolved_type': data.get('resolvedType') or token_contract
+                }
             return None
         except Exception as e:
             logger.error(f"❌ Error fetching token metadata: {e}")

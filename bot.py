@@ -584,22 +584,29 @@ Reply with your token contract address (0x...) when ready.
             analyzing_msg = await update.message.reply_text("🔍 Analyzing token and checking balance...")
             
             # Fetch metadata
-            metadata = self.wallet_manager.get_token_metadata(token_contract)
+            metadata_result = self.wallet_manager.get_token_metadata(token_contract)
             
             # Check balance
             main_balance = self.wallet_manager.get_wallet_balance(self.main_wallet_address)
             
-            if not metadata:
+            if not metadata_result:
                 # If we can't find metadata, it might be an invalid token or network issue
                 # But we can still proceed if the user is sure
                 token_info = f"❓ **Token Info Not Found**\nContract: `{token_contract}`"
+                resolved_type = token_contract
             else:
+                metadata = metadata_result['metadata']
+                resolved_type = metadata_result['resolved_type']
+                
+                # Update pending_ca with the fully resolved type for trading logic
+                self.user_states[user_id]['pending_ca'] = resolved_type
+                
                 token_info = f"""
 💎 **TOKEN FOUND**
 **Name:** {metadata.get('name', 'Unknown')}
 **Symbol:** {metadata.get('symbol', 'Unknown')}
 **Decimals:** {metadata.get('decimals', 'N/A')}
-**Contract:** `{token_contract}`
+**Contract:** `{resolved_type[:20]}...`
 """
 
             balance_info = f"💰 **Main Balance:** {float(main_balance):,.2f} SUI"
