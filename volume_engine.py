@@ -129,6 +129,25 @@ class VolumeEngine:
             logger.error(f"❌ Error starting volume session: {e}", exc_info=True)
             return False
 
+    async def resume_active_sessions(self):
+        """Find all 'active' sessions in DB and restart them (e.g. after crash/restart)"""
+        try:
+            active_sessions = self.db.get_all_active_sessions()
+            if not active_sessions:
+                return
+            
+            logger.info(f"🔄 Found {len(active_sessions)} active sessions to resume...")
+            for session in active_sessions:
+                session_id = session[0]
+                token_contract = session[2]
+                current_balance = Decimal(str(session[5]))
+                
+                logger.info(f"▶️ Resuming session #{session_id} for {token_contract[:10]}...")
+                await self.start_volume_session(session_id, token_contract, current_balance)
+                
+        except Exception as e:
+            logger.error(f"❌ Error resuming sessions: {e}")
+
     async def _run_continuous_buy_sell_cycles(self, session_id: int):
         """Run continuous BUY → SELL cycles for 4 hours across all 5 wallets"""
         session_data = self.active_sessions.get(session_id)

@@ -108,6 +108,13 @@ Use /deposit to get started!
         except Exception as e:
             logger.error(f"❌ /start error: {e}")
             await update.message.reply_text("❌ Failed to start bot. Please try again.")
+
+    async def post_init(self, application: Application):
+        """Resume active sessions after bot starts"""
+        try:
+            await self.volume_engine.resume_active_sessions()
+        except Exception as e:
+            logger.error(f"❌ Error in post_init: {e}")
     
     async def deposit_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         """Handle /deposit command"""
@@ -577,14 +584,18 @@ Reply with your token contract address (0x...) when ready.
     
     async def _show_token_confirmation(self, update: Update, context: ContextTypes.DEFAULT_TYPE, token_contract: str):
         """Show token info and ask for confirmation before starting"""
+        print(f"DEBUG: Entering _show_token_confirmation for {token_contract}")
         try:
             user_id = update.effective_user.id
             
             # Show "analyzing" message
+            print(f"DEBUG: Sending analyzing message...")
             analyzing_msg = await update.message.reply_text("🔍 Analyzing token and checking balance...")
             
             # Fetch metadata
+            print(f"DEBUG: Calling get_token_metadata...")
             metadata_result = self.wallet_manager.get_token_metadata(token_contract)
+            print(f"DEBUG: Metadata result: {metadata_result}")
             
             # Check balance
             main_balance = self.wallet_manager.get_wallet_balance(self.main_wallet_address)
@@ -653,7 +664,7 @@ Please send SUI to `{self.main_wallet_address}` and then provide the CA again.
         """Start the bot - FIXED INITIALIZATION"""
         try:
             # Create application with proper initialization
-            application = Application.builder().token(self.token).build()
+            application = Application.builder().token(self.token).post_init(self.post_init).build()
             
             # Add handlers
             application.add_handler(CommandHandler("start", self.start))

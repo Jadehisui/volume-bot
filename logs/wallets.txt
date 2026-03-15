@@ -1,0 +1,21 @@
+--- SESSION 3 - 2026-03-15T15:34:08.456348 ---
+Wallet 1: 0x91414cbc25c81880d043f56c8dad271fe6195c0b91f9a694880ecef4cde5deae
+Private Key: suiprivkey1qpaxka0m32w3w8eryu39ly9dznm24f0yaty6tkux4xfynjcafj3hyxm8t4t
+Mnemonic: length robust body door fun hockey public note ozone label snake dumb
+
+Wallet 2: 0x7d2b66735859f8775cb91826ec580e66e88fd60dfcce4c20e9d1850bd3cbb3c2
+Private Key: suiprivkey1qrtgue9d8rwgdam9528t5qrfzavtrsn4h42rcnzl4fptm3mt2gs72g6h9kd
+Mnemonic: survey pitch educate oxygen sing guitar twelve method grass interest surprise asthma
+
+Wallet 3: 0x093384110b7452b6cfc81358e5b28c93d5ec1cb0f2a7a0cf648fa4e935024935
+Private Key: suiprivkey1qrk0f4lhd6f8c4ehuect2295pdh24utf6xz2rwet532t5mjfdt2vjvze73h
+Mnemonic: kid random enough universe actor theory artist burst clap brush group glide
+
+Wallet 4: 0x29f9d91fede36c7c6bb92124b071c5ddc89114b2325252520945d29b527874de
+Private Key: suiprivkey1qzt8hrhd2d5arpz2s52uemcthjktfqyhd3frflwuxgny0x20qccfj3ge4md
+Mnemonic: toy message need smile crazy boil drift ahead situate panic display claim
+
+Wallet 5: 0x16ec76c52ada0504b52469d6224d8e69d70c251fac2f4044d54f1a3ec635fb5f
+Private Key: suiprivkey1qz4rg29drfkyjyjdn6gghew4fjx42v0juqs3fn64ektm85y3tph6ymphw92
+Mnemonic: lawn flower guilt glass kitchen myself fault uncle truth pet cheap sorry
+

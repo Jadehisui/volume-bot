@@ -305,6 +305,20 @@ class SuiDatabase:
         conn.close()
         return sessions
 
+    def get_all_active_sessions(self):
+        """Get all active trading sessions for all users"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            SELECT * FROM trading_sessions 
+            WHERE status = 'active'
+        ''')
+        
+        sessions = cursor.fetchall()
+        conn.close()
+        return sessions
+
     def get_session_for_trading(self, session_id):
         """Get session details for trading"""
         conn = sqlite3.connect(self.db_path)
