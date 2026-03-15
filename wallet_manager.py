@@ -198,9 +198,17 @@ class WalletManager:
                 return []
                 
             # Filter standard output spam if any
-            output_lines = result.stdout.strip().split('\n')
-            json_line = next(line for line in reversed(output_lines) if line.startswith('{'))
-            data = json.loads(json_line)
+            stdout_str = result.stdout.strip()
+            output_lines = stdout_str.split('\n')
+            
+            try:
+                json_line = next(line for line in reversed(output_lines) if line.startswith('{'))
+                data = json.loads(json_line)
+            except (StopIteration, json.JSONDecodeError) as parse_err:
+                logger.error(f"❌ Failed to parse JS output: {parse_err}")
+                logger.error(f"📝 Raw stdout: {stdout_str}")
+                logger.error(f"📝 Raw stderr: {result.stderr.strip()}")
+                return []
             
             if data.get('success'):
                 wallets = data.get('wallets', [])

@@ -518,7 +518,7 @@ class VolumeEngine:
             """
             
             # Store completion message
-            self.db.store_completion_message(session_id, completion_message)
+            # self.db.store_completion_message(session_id, completion_message)
             
             # Log final statistics
             logger.info("=" * 70)
