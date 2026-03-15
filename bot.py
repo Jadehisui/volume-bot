@@ -211,8 +211,8 @@ Then provide your token address again.
                     )
                     return
                 
-                # Process deposit (which now handles starting immediately if balance exists)
-                await self._process_user_deposit(user_id, message_text, context)
+                # Show token confirmation instead of processing immediately
+                await self._show_token_confirmation(update, context, message_text)
                 
                 # Clear user state
                 self.user_states.pop(user_id, None)
@@ -455,6 +455,14 @@ Fee Wallet: `{self.fee_wallet_address}`
                     callback_query=query
                 )
                 await self.help_command(mock_update, context)
+            elif data.startswith("confirm_start_"):
+                # Format: confirm_start_tokenContract
+                token_contract = data.split("_", 2)[2]
+                await query.edit_message_text(f"✅ **Confirmed!** Starting session for `{token_contract[:10]}...`")
+                await self._process_user_deposit(query.from_user.id, token_contract, context)
+            elif data == "cancel_start":
+                await query.edit_message_text("❌ **Operation cancelled.** Use /deposit or paste a CA to try again.")
+                self.user_states.pop(query.from_user.id, None)
                 
         except Exception as e:
             logger.error(f"❌ Callback error: {e}")
@@ -557,6 +565,66 @@ Reply with your token contract address (0x...) when ready.
             logger.error(f"❌ Refresh error: {e}")
             await query.edit_message_text("❌ Error refreshing information.")
     
+    async def _show_token_confirmation(self, update: Update, context: ContextTypes.DEFAULT_TYPE, token_contract: str):
+        """Show token info and ask for confirmation before starting"""
+        try:
+            user_id = update.effective_user.id
+            
+            # Show "analyzing" message
+            analyzing_msg = await update.message.reply_text("🔍 Analyzing token and checking balance...")
+            
+            # Fetch metadata
+            metadata = self.wallet_manager.get_token_metadata(token_contract)
+            
+            # Check balance
+            main_balance = self.wallet_manager.get_wallet_balance(self.main_wallet_address)
+            
+            if not metadata:
+                # If we can't find metadata, it might be an invalid token or network issue
+                # But we can still proceed if the user is sure
+                token_info = f"❓ **Token Info Not Found**\nContract: `{token_contract}`"
+            else:
+                token_info = f"""
+💎 **TOKEN FOUND**
+**Name:** {metadata.get('name', 'Unknown')}
+**Symbol:** {metadata.get('symbol', 'Unknown')}
+**Decimals:** {metadata.get('decimals', 'N/A')}
+**Contract:** `{token_contract}`
+"""
+
+            balance_info = f"💰 **Main Balance:** {float(main_balance):,.2f} SUI"
+            status_ready = main_balance >= self.min_deposit
+            
+            if status_ready:
+                msg = f"""
+{token_info}
+{balance_info}
+
+✅ **Everything is ready!** Click the button below to start the 4-hour volume generation.
+"""
+                keyboard = InlineKeyboardMarkup([
+                    [InlineKeyboardButton("🚀 Start Volume Now", callback_data=f"confirm_start_{token_contract}")],
+                    [InlineKeyboardButton("❌ Cancel", callback_data="cancel_start")]
+                ])
+            else:
+                msg = f"""
+{token_info}
+{balance_info}
+
+❌ **Insufficient Balance.** (Need {float(self.min_deposit):,} SUI)
+Please send SUI to `{self.main_wallet_address}` and then provide the CA again.
+"""
+                keyboard = InlineKeyboardMarkup([
+                    [InlineKeyboardButton("🔄 Refresh", callback_data="refresh_deposit")],
+                    [InlineKeyboardButton("❌ Cancel", callback_data="cancel_start")]
+                ])
+
+            await analyzing_msg.edit_text(msg, parse_mode='Markdown', reply_markup=keyboard)
+            
+        except Exception as e:
+            logger.error(f"❌ Error in _show_token_confirmation: {e}")
+            await update.message.reply_text("❌ Failed to analyze token. Please try again.")
+
     def _is_valid_contract_address(self, address: str) -> bool:
         """Validate contract address format (Sui can be 0x2::sui::SUI or 66 chars)"""
         if not address.startswith('0x'):

@@ -136,6 +136,28 @@ class WalletManager:
             logger.error(f"❌ Exception getting SUI balance for {address}: {e}")
             return Decimal('0')
 
+    def get_token_metadata(self, token_contract: str) -> Optional[Dict]:
+        """Fetch coin metadata using JS bridge"""
+        try:
+            logger.info(f"🔍 Fetching metadata for {token_contract}...")
+            result = subprocess.run(
+                ['node', 'getCoinMetadata.js', token_contract],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
+            
+            if result.returncode != 0:
+                return None
+                
+            data = json.loads(result.stdout.strip())
+            if data.get('success'):
+                return data.get('metadata')
+            return None
+        except Exception as e:
+            logger.error(f"❌ Error fetching token metadata: {e}")
+            return None
+
     async def wait_for_deposit(self, address: str, min_balance: Decimal, timeout_mins: int = 10) -> Tuple[bool, Decimal]:
         """Wait for a deposit to arrive at the address"""
         import time
