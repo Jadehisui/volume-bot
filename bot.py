@@ -180,11 +180,14 @@ Your main wallet already has **{float(main_balance):,.2f} SUI**, which is enough
             
             user_state = self.user_states.get(user_id, {})
             
-            if user_state.get('state') == 'awaiting_token':
-                # Validate token contract address
-                if not self._is_valid_contract_address(message_text):
+            # Check if it looks like a contract address
+            is_ca = self._is_valid_contract_address(message_text)
+            
+            if user_state.get('state') == 'awaiting_token' or is_ca:
+                # If not a valid CA but we were expecting one, error out
+                if not is_ca:
                     await update.message.reply_text(
-                        "❌ Invalid contract address format. Please provide a valid 0x... address (42 characters)."
+                        "❌ Invalid contract address format. Please provide a valid 0x... address."
                     )
                     return
                 
@@ -208,7 +211,7 @@ Then provide your token address again.
                     )
                     return
                 
-                # Process deposit
+                # Process deposit (which now handles starting immediately if balance exists)
                 await self._process_user_deposit(user_id, message_text, context)
                 
                 # Clear user state
