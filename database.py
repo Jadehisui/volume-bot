@@ -101,6 +101,16 @@ class SuiDatabase:
             )
         ''')
         
+        # Persistent user states
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS user_states (
+                user_id INTEGER PRIMARY KEY,
+                pending_ca TEXT,
+                state TEXT,
+                last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
         conn.commit()
         conn.close()
         logger.info("✅ Database initialized successfully")
@@ -333,15 +343,43 @@ class SuiDatabase:
         return session
 
     def mark_session_completed(self, session_id):
-        """Mark a session as completed"""
+        # Mark a session as completed
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
+        cursor.execute(
+            "UPDATE trading_sessions SET status = 'completed', completed_at = ? WHERE session_id = ?",
+            (datetime.now(), session_id)
+        )
+        conn.commit()
+        conn.close()
+        logger.info(f"✅ Session {session_id} marked as completed")
+
+    def get_user_state(self, user_id):
+        """Get persistent user state"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        cursor.execute("SELECT pending_ca, state FROM user_states WHERE user_id = ?", (user_id,))
+        row = cursor.fetchone()
+        conn.close()
+        if row:
+            return {'pending_ca': row[0], 'state': row[1]}
+        return {}
+
+    def save_user_state(self, user_id, state_dict):
+        """Save persistent user state"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        pending_ca = state_dict.get('pending_ca')
+        state = state_dict.get('state')
         
         cursor.execute('''
-            UPDATE trading_sessions 
-            SET status = 'completed', completed_at = CURRENT_TIMESTAMP
-            WHERE session_id = ?
-        ''', (session_id,))
+            INSERT INTO user_states (user_id, pending_ca, state, last_updated)
+            VALUES (?, ?, ?, ?)
+            ON CONFLICT(user_id) DO UPDATE SET
+                pending_ca = excluded.pending_ca,
+                state = excluded.state,
+                last_updated = excluded.last_updated
+        ''', (user_id, pending_ca, state, datetime.now()))
         
         conn.commit()
         conn.close()

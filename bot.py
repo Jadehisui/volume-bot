@@ -52,8 +52,8 @@ class SuiVolumeBot:
         self.main_wallet_address = self.wallet_manager.main_wallet['address']
         self.fee_wallet_address = self.wallet_manager.fee_wallet
         
-        # User states
-        self.user_states = {}  # {user_id: {'state': 'awaiting_token', 'data': {}}}
+        # User states (in-memory, pending_ca also saved to DB for crash recovery)
+        self.user_states = {}  # {user_id: {'state': 'awaiting_token', 'pending_ca': '0x...'}}
         
         logger.info("✅ Sui Volume Bot initialized")
         logger.info(f"💰 Main wallet: {self.main_wallet_address}")
@@ -163,10 +163,7 @@ Your main wallet already has **{float(main_balance):,.2f} SUI**, which is enough
 **Reply with your token contract address (0x...) after sending SUI**
 """            
             # Set user state
-            self.user_states[user_id] = {
-                'state': 'awaiting_token',
-                'data': {}
-            }
+            self.user_states[user_id] = {'state': 'awaiting_token'}
             
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("📊 Check Balance", callback_data="check_balance")],
@@ -218,13 +215,14 @@ Then provide your token address again.
                     )
                     return
                 
-                # Store pending CA and show confirmation
+                # Store pending CA in memory AND in DB for crash recovery
                 if user_id not in self.user_states:
                     self.user_states[user_id] = {}
                 self.user_states[user_id]['pending_ca'] = message_text
+                self.db.save_user_state(user_id, {'pending_ca': message_text, 'state': 'awaiting_confirm'})
                 
                 await self._show_token_confirmation(update, context, message_text)
-                
+
                 # Note: We NO LONGER pop user_state here as we need 'pending_ca' 
                 # for the confirmation callback.
                 
@@ -467,12 +465,17 @@ Fee Wallet: `{self.fee_wallet_address}`
                 )
                 await self.help_command(mock_update, context)
             elif data == "confirm_start":
-                # Retrieve CA from state
+                # Retrieve CA from in-memory state, fall back to DB
                 user_state = self.user_states.get(query.from_user.id, {})
                 token_contract = user_state.get('pending_ca')
                 
                 if not token_contract:
-                    await query.edit_message_text("❌ **Error:** Token contract not found in session. Please paste the address again.")
+                    # Try loading from DB (survives restarts)
+                    db_state = self.db.get_user_state(query.from_user.id)
+                    token_contract = db_state.get('pending_ca') if db_state else None
+                
+                if not token_contract:
+                    await query.edit_message_text("❌ **Error:** Session expired. Please paste the token address again.")
                     return
                 
                 await query.edit_message_text(f"✅ **Confirmed!** Starting session for `{token_contract[:10]}...`")
@@ -609,8 +612,11 @@ Reply with your token contract address (0x...) when ready.
                 metadata = metadata_result['metadata']
                 resolved_type = metadata_result['resolved_type']
                 
-                # Update pending_ca with the fully resolved type for trading logic
+                # Update pending_ca with fully resolved type (in memory + DB)
+                if user_id not in self.user_states:
+                    self.user_states[user_id] = {}
                 self.user_states[user_id]['pending_ca'] = resolved_type
+                self.db.save_user_state(user_id, {'pending_ca': resolved_type, 'state': 'awaiting_confirm'})
                 
                 token_info = f"""
 💎 **TOKEN FOUND**
