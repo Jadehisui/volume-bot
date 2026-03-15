@@ -120,7 +120,23 @@ Use /deposit to get started!
             # Check main wallet balance
             main_balance = self.wallet_manager.get_wallet_balance(self.main_wallet_address)
             
-            deposit_msg = f"""
+            if main_balance >= self.min_deposit:
+                deposit_msg = f"""
+✅ **BALANCE SUFFICIENT**
+
+Your main wallet already has **{float(main_balance):,.2f} SUI**, which is enough to start!
+
+**Next Step:** Reply with your token contract address (0x...) to begin the volume generation.
+
+**Main Wallet:** `{self.main_wallet_address}`
+**Requirements:**
+• Minimum: {self.min_deposit:,} SUI (Met)
+• Fee: A standard operational fee is deducted
+• Trading: Remaining divided equally among 5 wallets
+• Strategy: 70% of balance per trade
+"""
+            else:
+                deposit_msg = f"""
 💰 **VOLUME GENERATION DEPOSIT**
 
 **Step 1:** Send **{self.min_deposit:,}+ SUI** to:
@@ -135,11 +151,10 @@ Use /deposit to get started!
 • Strategy: 70% of balance per trade
 
 **Current Main Wallet Balance:** {float(main_balance):,.2f} SUI
-{'✅ **Ready for deposits!**' if main_balance >= self.min_deposit else '❌ **Waiting for deposits...**'}
+❌ **Waiting for deposits...**
 
 **Reply with your token contract address (0x...) after sending SUI**
-            """
-            
+"""            
             # Set user state
             self.user_states[user_id] = {
                 'state': 'awaiting_token',
@@ -211,24 +226,29 @@ Then provide your token address again.
     async def _process_user_deposit(self, user_id: int, token_contract: str, context: ContextTypes.DEFAULT_TYPE):
         """Process user deposit and start volume generation"""
         try:
+            # Check current balance
+            current_balance = self.wallet_manager.get_wallet_balance(self.main_wallet_address)
+            
             # Send processing message
+            status_text = "🔄 Starting volume generation..." if current_balance >= self.min_deposit else "🔄 Processing your deposit... This may take a minute."
             processing_msg = await context.bot.send_message(
                 chat_id=user_id,
-                text="🔄 Processing your deposit... This may take a minute.",
+                text=status_text,
                 parse_mode='Markdown'
             )
             
-            # Wait for deposit to hit RPC
-            deposit_detected, current_balance = await self.wallet_manager.wait_for_deposit(
-                self.main_wallet_address, self.min_deposit
-            )
-            
-            if not deposit_detected:
-                await processing_msg.edit_text(
-                    f"❌ **Deposit not detected yet.**\n\nPlease ensure you sent {float(self.min_deposit):,} SUI to:\n`{self.main_wallet_address}`\n\nBalance: {float(current_balance):,.2f} SUI",
-                    parse_mode='Markdown'
+            # Wait for deposit ONLY if not already sufficient
+            if current_balance < self.min_deposit:
+                deposit_detected, current_balance = await self.wallet_manager.wait_for_deposit(
+                    self.main_wallet_address, self.min_deposit
                 )
-                return
+                
+                if not deposit_detected:
+                    await processing_msg.edit_text(
+                        f"❌ **Deposit not detected yet.**\n\nPlease ensure you sent {float(self.min_deposit):,} SUI to:\n`{self.main_wallet_address}`\n\nBalance: {float(current_balance):,.2f} SUI",
+                        parse_mode='Markdown'
+                    )
+                    return
 
             # Create trading session in database FIRST to get the ID
             trading_amount = current_balance - self.wallet_manager.FEE_AMOUNT
