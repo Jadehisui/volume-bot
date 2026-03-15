@@ -20,7 +20,7 @@ function generateWallets(count = 5) {
             index: i + 1,
             mnemonic,
             address,
-            privateKey,
+            private_key: privateKey,
         });
     }
 
